@@ -22,5 +22,4 @@ function generate() {
 	var desc= descriptions[index1];
 	document.getElementById("generated").innerHTML = desc;
 	oldIndex = index1;
-	return index1;
 }

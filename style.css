@@ -18,6 +18,10 @@ h1 {
 	font-size: 4rem;
 }
 
+a {
+	color: #fff;
+}
+
 p#generated {
 	font-size: 6rem;
 }
@@ -39,3 +43,28 @@ p#generated {
 	background: #1380b8;
 	border: solid #fff 1px;
 }
+
+ul {
+	padding: 3rem;
+	padding-top: 1rem;
+}
+
+ul li {
+	display: inline-block;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+}
+
+ul li a {
+	text-decoration: none;
+	margin: 1rem;
+	padding: 0.5rem;
+}
+
+ul li a:hover {
+	color: #ccc;
+}
+
+/*ul li a::before {
+	content: "||   ";
+}*/
