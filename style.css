@@ -1,0 +1,41 @@
+html {
+	font-size: 62.5%;
+	background-color: #1380b8;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bolder;
+	color: #fff;
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+h1 {
+	margin-top: 10%;
+	font-size: 4rem;
+}
+
+p#generated {
+	font-size: 6rem;
+}
+
+.button {
+	-webkit-border-radius: 3;
+	-moz-border-radius: 3;
+	border-radius: 3px;
+	color: #1380b8;
+	font-size: 20px;
+	background: #fff;
+	padding: 10px 20px 10px 20px;
+	border: solid #1380b8 1px;
+	text-decoration: none;
+}
+
+.button:hover {
+	color: #fff;
+	background: #1380b8;
+	border: solid #fff 1px;
+}
