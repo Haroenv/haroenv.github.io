@@ -64,7 +64,3 @@ ul li a {
 ul li a:hover {
 	color: #ccc;
 }
-
-/*ul li a::before {
-	content: "||   ";
-}*/
