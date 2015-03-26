@@ -14,7 +14,7 @@ function generate() {
 	index1 = Math.floor(Math.random() * descriptions.length);
 	if (index1 == oldIndex) {
 		if (index1 == 0) {
-			index1 = descriptions.length;
+			index1 = descriptions.length-1;
 		} else {
 			index1--;
 		};
@@ -22,4 +22,5 @@ function generate() {
 	var desc= descriptions[index1];
 	document.getElementById("generated").innerHTML = desc;
 	oldIndex = index1;
+	return index1;
 }
