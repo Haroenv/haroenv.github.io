@@ -6,7 +6,8 @@ descriptions = new Array(
 	"nerd",
 	"space enthousiast",
 	"poweruser",
-	"meme"
+	"meme",
+	"Belgian"
 	);
 
 var oldIndex = 0;
