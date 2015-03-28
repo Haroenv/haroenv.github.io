@@ -1,6 +1,6 @@
 html {
 	font-size: 62.5%;
-	background-color: #1380b8;
+	background-color: #009688;
 	margin-top: auto;
 	margin-bottom: auto;
 }
@@ -30,17 +30,17 @@ p#generated {
 	-webkit-border-radius: 3;
 	-moz-border-radius: 3;
 	border-radius: 3px;
-	color: #1380b8;
+	color: #009688;
 	font-size: 20px;
 	background: #fff;
 	padding: 10px 20px 10px 20px;
-	border: solid #1380b8 1px;
+	border: none;
 	text-decoration: none;
 }
 
 .button:hover {
 	color: #fff;
-	background: #1380b8;
+	background: #009688;
 	border: solid #fff 1px;
 }
 
