@@ -36,6 +36,7 @@ p#generated {
 	padding: 10px 20px 10px 20px;
 	border: none;
 	text-decoration: none;
+	border: solid #009688 1px;
 }
 
 .button:hover {
