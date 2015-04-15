@@ -1,3 +1,5 @@
+/* General stying */
+
 html {
 	font-size: 62.5%;
 	background-color: #009688;
@@ -32,9 +34,7 @@ a {
 	color: #fff;
 }
 
-p#generated {
-	font-size: 6rem;
-}
+/* Button */
 
 .button {
 	-webkit-border-radius: 3;
@@ -53,6 +53,12 @@ p#generated {
 	background: #009688;
 	border: solid #fff 1px;
 }
+
+p#generated {
+	font-size: 6rem;
+}
+
+/* Social icons */
 
 .social ul {
 	padding: 3rem;
