@@ -11,21 +11,21 @@ body {
 	color: #fff;
 	text-align: center;
 	font-size: 1.6rem;
-<<<<<<< HEAD
-	/*height: 100%;*/
-=======
 	word-break: break-all;
 	margin: 1.5rem;
->>>>>>> master
 }
 
 .fullpage {
-	height: 100vh;
+	height: 80vh;
 }
 
 h1, h2 {
-	margin-top: 10%;
+	margin-top: 20vh;
 	font-size: 4rem;
+}
+
+footer h2 {
+	margin-top: 5vh;
 }
 
 a {
