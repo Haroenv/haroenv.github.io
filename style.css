@@ -2,8 +2,8 @@
 
 html {
 	font-size: 62.5%;
-	margin-top: auto;
-	margin-bottom: auto;
+	/*margin-top: auto;
+	margin-bottom: auto;*/
 }
 
 body {
@@ -13,21 +13,24 @@ body {
 	text-align: center;
 	font-size: 1.6rem;
 	background-color: #009688;
-	margin: 1.5rem;
 }
 
 .fullpage {
-	height: 80vh;
+	height: 90vh;
+	padding-top: 10vh;
+	border: 1px dotted #000;
+	position: relative;
 }
 
-h1, h2 {
-	margin-top: 20vh;
+.arrow {
+	position: absolute;
+	bottom: 2vh;
+}
+
+h1, h2.main {
 	font-size: 4rem;
 }
 
-footer h2 {
-	margin-top: 5vh;
-}
 
 a {
 	color: #fff;
