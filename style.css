@@ -13,7 +13,6 @@ body {
 	color: #fff;
 	text-align: center;
 	font-size: 1.6rem;
-	word-break: break-all;
 	margin: 1.5rem;
 }
 
@@ -56,6 +55,10 @@ a {
 
 p#generated {
 	font-size: 6rem;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 }
 
 /* Social icons */
