@@ -15,6 +15,14 @@ body {
 	background-color: #009688;
 }
 
+a {
+	color: #fff;
+}
+
+a:hover {
+	color: #ccc;
+}
+
 .fullpage {
 	height: 90vh;
 	padding-top: 10vh;
@@ -44,11 +52,6 @@ body {
 
 h1, h2.main {
 	font-size: 4rem;
-}
-
-
-a {
-	color: #fff;
 }
 
 /* Button */
@@ -98,6 +101,151 @@ p#generated {
 	padding: 0.5rem;
 }
 
-.social ul li a:hover {
-	color: #ccc;
+/* competencies */
+
+dl.competencies {
+	padding: 3rem;
+	padding-top: 1rem;
+}
+
+dl.competencies dt, dl.competencies dd {
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	margin: 0.5rem 0;
+}
+
+dl.competencies dt {
+	font-size: 2rem;
+	margin: 1.5rem;
+}
+
+.level-5 {
+	z-index: 0;
+	width: 10rem;
+	height: 1rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-5::before {
+	z-index: 1;
+	width: 5rem;
+	height: 1rem;
+	background: #009688;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-7 {
+	z-index: 0;
+	width: 10rem;
+	height: 1rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-7:after {
+	z-index: 1;
+	width: 7rem;
+	height: 1rem;
+	background: #009688;
+	border-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-8 {
+	z-index: 0;
+	width: 10rem;
+	height: 1rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-8:after {
+	z-index: 1;
+	width: 8rem;
+	height: 1rem;
+	background: #009688;
+	border-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-B2 {
+	z-index: 0;
+	width: 10rem;
+	height: 1rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-B2:after {
+	z-index: 1;
+	width: 6rem;
+	height: 1rem;
+	background: #009688;
+	border-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-C1 {
+	z-index: 0;
+	width: 10rem;
+	height: 1rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-C1:after {
+	z-index: 1;
+	width: 8rem;
+	height: 1rem;
+	background: #009688;
+	border-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-C2 {
+	z-index: 0;
+	width: 10rem;
+	height: 1rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+.level-C2:after {
+	z-index: 1;
+	width: 10rem;
+	height: 1rem;
+	background: #009688;
+	border-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+}
+
+
+.list li {
+	list-style-type: none;
+	margin-top: 1rem;
 }
