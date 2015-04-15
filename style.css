@@ -11,7 +11,12 @@ body {
 	color: #fff;
 	text-align: center;
 	font-size: 1.6rem;
+<<<<<<< HEAD
 	/*height: 100%;*/
+=======
+	word-break: break-all;
+	margin: 1.5rem;
+>>>>>>> master
 }
 
 .fullpage {
