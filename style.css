@@ -2,7 +2,6 @@
 
 html {
 	font-size: 62.5%;
-	background-color: #009688;
 	margin-top: auto;
 	margin-bottom: auto;
 }
@@ -13,6 +12,7 @@ body {
 	color: #fff;
 	text-align: center;
 	font-size: 1.6rem;
+	background-color: #009688;
 	margin: 1.5rem;
 }
 
