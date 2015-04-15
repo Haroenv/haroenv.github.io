@@ -18,27 +18,28 @@ body {
 .fullpage {
 	height: 90vh;
 	padding-top: 10vh;
-	border: 1px dotted #000;
+	/*border: 1px dotted #000;*/
 	position: relative;
 }
 
-/* arrow isn't necessary on mobile */
+/* on mobile, the header is too high, and the arrow wouldn't fit */
 @media all and (max-height: 600px) {
 	.fullpage {
 		height: 100%;
 		padding-top: 0;
 		padding-bottom: 6vh;
 	}
-
-	.arrow {
-		/*display: none;*/
-		/*padding-top: 10rem;*/
-	}
 }
 
 .arrow {
 	position: absolute;
 	bottom: 2vh;
+}
+
+@media all and (min-height: 600px) {
+	.arrow {
+		bottom: 4vh;
+	}
 }
 
 h1, h2.main {
