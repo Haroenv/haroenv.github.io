@@ -11,6 +11,8 @@ body {
 	color: #fff;
 	text-align: center;
 	font-size: 1.6rem;
+	word-break: break-all;
+	margin: 1.5rem;
 }
 
 h1 {
