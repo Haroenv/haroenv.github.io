@@ -110,6 +110,7 @@ p#generated {
 li.marks {
 	display: inline-block;
 	margin: 1rem;
+	vertical-align: text-top;
 }
 
 ul.competencies li {
