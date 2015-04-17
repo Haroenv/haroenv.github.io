@@ -119,17 +119,28 @@ dl.competencies dt {
 	margin: 1.5rem;
 }
 
-.level-5 {
+.level-5,
+.level-7,
+.level-8,
+.level-B2,
+.level-C1,
+.level-C2 {
 	z-index: 0;
 	width: 10rem;
-	height: 1rem;
+	height: 1.2rem;
 	background: #fff;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 0.3rem;
+	border-color: #009688;
+	position: relative;
 }
 
-.level-5::before {
+.level-5::after {
+	content: "";
+	position: absolute;
+	left: 0.1rem;
+	top: 0.1rem;
 	z-index: 1;
 	width: 5rem;
 	height: 1rem;
@@ -137,111 +148,70 @@ dl.competencies dt {
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 0.3rem;
-}
-
-.level-7 {
-	z-index: 0;
-	width: 10rem;
-	height: 1rem;
-	background: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-}
-
-.level-7:after {
-	z-index: 1;
-	width: 7rem;
-	height: 1rem;
-	background: #009688;
 	border-color: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
 }
 
-.level-8 {
-	z-index: 0;
-	width: 10rem;
-	height: 1rem;
-	background: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-}
-
-.level-8:after {
-	z-index: 1;
-	width: 8rem;
-	height: 1rem;
-	background: #009688;
-	border-color: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-}
-
-.level-B2 {
-	z-index: 0;
-	width: 10rem;
-	height: 1rem;
-	background: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-}
-
-.level-B2:after {
+.level-6::after,
+.level-B2::after {
+	content: "";
+	position: absolute;
+	left: 0.1rem;
+	top: 0.1rem;
 	z-index: 1;
 	width: 6rem;
 	height: 1rem;
 	background: #009688;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
 	border-color: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
 }
 
-.level-C1 {
-	z-index: 0;
-	width: 10rem;
+.level-7::after {
+	content: "";
+	position: absolute;
+	left: 0.1rem;
+	top: 0.1rem;
+	z-index: 1;
+	width: 7rem;
 	height: 1rem;
-	background: #fff;
+	background: #009688;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 0.3rem;
+	border-color: #fff;
 }
 
-.level-C1:after {
+.level-8::after,
+.level-C1::after {
+	content: "";
+	position: absolute;
+	left: 0.1rem;
+	top: 0.1rem;
 	z-index: 1;
 	width: 8rem;
 	height: 1rem;
 	background: #009688;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
 	border-color: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
 }
 
-.level-C2 {
-	z-index: 0;
-	width: 10rem;
-	height: 1rem;
-	background: #fff;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-}
-
-.level-C2:after {
+.level-10::after,
+.level-C2::after {
+	content: "";
+	position: absolute;
+	left: 0.1rem;
+	top: 0.1rem;
 	z-index: 1;
-	width: 10rem;
+	width: 9.8rem;
 	height: 1rem;
 	background: #009688;
-	border-color: #fff;
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 0.3rem;
+	border-color: #fff;
 }
 
 
