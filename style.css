@@ -119,12 +119,7 @@ dl.competencies dt {
 	margin: 1.5rem;
 }
 
-.level-5,
-.level-7,
-.level-8,
-.level-B2,
-.level-C1,
-.level-C2 {
+.level {
 	z-index: 0;
 	width: 10rem;
 	height: 1.2rem;
