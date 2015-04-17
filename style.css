@@ -103,21 +103,39 @@ p#generated {
 
 /* competencies */
 
-dl.competencies {
-	padding: 3rem;
-	padding-top: 1rem;
+li.marks {
+	display: inline-block;
 }
 
-dl.competencies dt, dl.competencies dd {
+ul.competencies li {
+	list-style-type: none;
+}
+
+ul.competencies > li > ul {
+	padding-left: 0;
+}
+
+h3.competencies,
+ul.competencies > li > ul > li > p {
 	font-size: 1.3rem;
 	text-transform: uppercase;
 	margin: 0.5rem 0;
 }
 
-dl.competencies dt {
+h3.competencies {
 	font-size: 2rem;
 	margin: 1.5rem;
 }
+
+@media all and (max-width: 350px) {
+	#competencies .arrow,
+	#education .arrow {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+/* bars */
 
 .level {
 	z-index: 0;
