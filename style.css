@@ -113,6 +113,12 @@ li.marks {
 	vertical-align: text-top;
 }
 
+@media all and (max-width: 470px) {
+	li.marks {
+		display: inline;
+	}
+}
+
 ul.competencies li {
 	list-style-type: none;
 }
