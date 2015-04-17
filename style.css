@@ -105,26 +105,27 @@ p#generated {
 
 li.marks {
 	display: inline-block;
+	margin: 1rem;
 }
 
 ul.competencies li {
 	list-style-type: none;
 }
 
-ul.competencies > li > ul {
+li.marks ul {
 	padding-left: 0;
 }
 
-h3.competencies,
-ul.competencies > li > ul > li > p {
+ul.items p {
 	font-size: 1.3rem;
 	text-transform: uppercase;
-	margin: 0.5rem 0;
+	margin: 0.5rem;
 }
 
 h3.competencies {
+	text-transform: uppercase;
 	font-size: 2rem;
-	margin: 1.5rem;
+	margin: 1.5rem 0;
 }
 
 @media all and (max-width: 350px) {
