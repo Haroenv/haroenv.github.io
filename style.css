@@ -35,6 +35,7 @@ ul {
 }
 
 /* on mobile, the header is too high, and the arrow wouldn't fit */
+
 @media all and (max-height: 600px) {
 	.fullpage {
 		height: 100%;
@@ -104,6 +105,24 @@ p#generated {
 	margin: 1rem;
 	padding: 0.5rem;
 }
+
+.icons::before {
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+	display: inline-block;
+	padding-right: 0.3rem;
+	vertical-align: top;
+}
+.github::before        { content: "\f09b"; }
+.codepen::before       { content: "\f1cb"; }
+.twitter::before       { content: "\f099"; }
+.instagram::before     { content: "\f16d"; }
+.envelope::before      { content: "\f0e0"; }
+.space-shuttle::before { content: "\f197"; }
 
 /* competencies */
 
