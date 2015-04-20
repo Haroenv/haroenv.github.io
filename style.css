@@ -45,9 +45,12 @@ ul {
 }
 
 .arrow {
+	font-size: 4em;
 	position: absolute;
 	bottom: 2vh;
 }
+
+.long-arrow-down::before { content: "\f175"; }
 
 @media all and (min-height: 600px) {
 	.arrow {
