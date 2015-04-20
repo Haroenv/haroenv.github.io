@@ -145,6 +145,11 @@ li.marks {
 	li.marks {
 		display: inline;
 	}
+	#competencies .arrow,
+	#education .arrow {
+		display: none;
+		visibility: hidden;
+	}
 }
 
 ul.competencies li {
@@ -165,14 +170,6 @@ h3.competencies {
 	text-transform: uppercase;
 	font-size: 2rem;
 	margin: 1.5rem 0;
-}
-
-@media all and (max-width: 350px) {
-	#competencies .arrow,
-	#education .arrow {
-		display: none;
-		visibility: hidden;
-	}
 }
 
 /* bars */
