@@ -2,12 +2,18 @@
 
 html {
 	font-size: 62.5%;
-	/*margin-top: auto;
-	margin-bottom: auto;*/
+}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0');
+	src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: sans-serif;
 	font-weight: bolder;
 	color: #fff;
 	text-align: center;
@@ -45,7 +51,7 @@ ul {
 }
 
 .arrow {
-	font-size: 4em;
+	font-size: 2em;
 	position: absolute;
 	bottom: 2vh;
 }
@@ -110,13 +116,13 @@ p#generated {
 }
 
 .icons::before {
+	display: inline-block;
 	font: normal normal normal 14px/1 FontAwesome;
 	font-size: inherit;
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	transform: translate(0, 0);
-	display: inline-block;
 	padding-right: 0.3rem;
 	vertical-align: top;
 }
