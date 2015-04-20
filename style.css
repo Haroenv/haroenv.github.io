@@ -42,7 +42,7 @@ ul {
 
 /* on mobile, the header is too high, and the arrow wouldn't fit */
 
-@media all and (max-height: 600px) {
+@media all and (max-height: 600px) , (max-width: 470px) {
 	.fullpage {
 		height: 100%;
 		padding-top: 0;
