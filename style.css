@@ -182,6 +182,7 @@ h3.competencies {
 	border-radius: 0.3rem;
 	position: relative;
 	padding: 1px;
+	margin: 0 auto;
 }
 
 .level::after {
@@ -193,6 +194,7 @@ h3.competencies {
 	position: absolute;
 	left: 1px;
 	top: 1px;
+	margin: 0 auto;
 }
 
 .level-5::after  { width: 5rem; }
