@@ -177,92 +177,32 @@ h3.competencies {
 .level {
 	z-index: 0;
 	width: 10rem;
-	height: 1.2rem;
+	height: 1rem;
 	background: #fff;
-	margin-left: auto;
-	margin-right: auto;
 	border-radius: 0.3rem;
-	border-color: #009688;
 	position: relative;
+	padding: 1px;
 }
 
-.level-5::after {
-	content: "";
-	position: absolute;
-	left: 0.1rem;
-	top: 0.1rem;
+.level::after {
 	z-index: 1;
-	width: 5rem;
+	content: "";
 	height: 1rem;
 	background: #009688;
-	margin-left: auto;
-	margin-right: auto;
 	border-radius: 0.3rem;
-	border-color: #fff;
+	position: absolute;
+	left: 1px;
+	top: 1px;
 }
 
-.level-6::after,
-.level-B2::after {
-	content: "";
-	position: absolute;
-	left: 0.1rem;
-	top: 0.1rem;
-	z-index: 1;
-	width: 6rem;
-	height: 1rem;
-	background: #009688;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-	border-color: #fff;
-}
-
-.level-7::after {
-	content: "";
-	position: absolute;
-	left: 0.1rem;
-	top: 0.1rem;
-	z-index: 1;
-	width: 7rem;
-	height: 1rem;
-	background: #009688;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-	border-color: #fff;
-}
-
-.level-8::after,
-.level-C1::after {
-	content: "";
-	position: absolute;
-	left: 0.1rem;
-	top: 0.1rem;
-	z-index: 1;
-	width: 8rem;
-	height: 1rem;
-	background: #009688;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-	border-color: #fff;
-}
-
-.level-10::after,
-.level-C2::after {
-	content: "";
-	position: absolute;
-	left: 0.1rem;
-	top: 0.1rem;
-	z-index: 1;
-	width: 9.8rem;
-	height: 1rem;
-	background: #009688;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0.3rem;
-	border-color: #fff;
-}
+.level-5::after  { width: 5rem; }
+.level-B2::after,
+.level-6::after  { width: 6rem; }
+.level-7::after  { width: 7rem; }
+.level-C1::after,
+.level-8::after  { width: 8rem; }
+.level-C2::after,
+.level-10::after { width: 10rem; }
 
 
 .list li {
