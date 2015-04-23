@@ -86,6 +86,7 @@ h1, h2.main {
 	color: #fff;
 	background: #009688;
 	border: solid #fff 1px;
+	cursor: pointer;
 }
 
 p#generated {
