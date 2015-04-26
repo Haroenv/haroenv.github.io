@@ -64,6 +64,12 @@ ul {
 	}
 }
 
+@media screen and (max-height: 540px) {
+	.arrow {
+		display: none;
+	}
+}
+
 h1, h2.main {
 	font-size: 4rem;
 }
