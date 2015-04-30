@@ -18,7 +18,7 @@ body {
 	color: #fff;
 	text-align: center;
 	font-size: 1.6rem;
-	background-color: #009688;
+	background-color: #7F1734;
 }
 
 a {
@@ -80,18 +80,18 @@ h1, h2.main {
 	-webkit-border-radius: 3;
 	-moz-border-radius: 3;
 	border-radius: 3px;
-	color: #009688;
+	color: #7F1734;
 	font-size: 20px;
 	background: #fff;
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;
-	border: solid #009688 1px;
+	border: solid #7F1734 1px;
 	transition: background-color .2s, color .2s, border-color .2s;
 }
 
 .button:hover {
 	color: #fff;
-	background: #009688;
+	background: #7F1734;
 	border: solid #fff 1px;
 	cursor: pointer;
 }
@@ -198,7 +198,7 @@ h3.competencies {
 	z-index: 1;
 	content: "";
 	height: 1rem;
-	background: #009688;
+	background: #7F1734;
 	border-radius: 0.3rem;
 	position: absolute;
 	left: 1px;
