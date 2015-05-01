@@ -55,7 +55,7 @@
 			</ul>
 		</div>
 
-		<a href="#competencies" class="icons arrow long-arrow-down"></a>
+		<a href="#competencies" onclick="return goTo('main', 'competencies')" class="icons arrow long-arrow-down"></a>
 	</section>
 
 	<!-- competencies -->
@@ -122,7 +122,7 @@
 			</li>
 		</ul>
 
-		<a href="#education" class="icons arrow long-arrow-down"></a>
+		<a href="#education" onclick="return goTo('competencies', 'education')"  class="icons arrow long-arrow-down"></a>
 	</section>
 
 	<!-- education -->
@@ -134,7 +134,7 @@
 			<li>professional bachelor <a target="_blank" href="http://odisee.be/Odisee/Sections/Dutch-Programmes/Courses-Odisee-Technology/Courses-Odisee-Technology-Electronics-ICT.html">electronics-information technology</a> (in progress)</li>
 		</ul>
 
-		<a href="#jobs" class="icons arrow long-arrow-down"></a>
+		<a href="#jobs" onclick="return goTo('education', 'jobs')" class="icons arrow long-arrow-down"></a>
 	</section>
 
 	<!-- jobs -->
@@ -177,6 +177,24 @@
 			document.getElementById("generated").innerHTML = desc;
 			oldIndex = index1;
 		}
+	</script>
+
+	<!-- scrolling -->
+	<script>
+function animate(from,to,time) {
+    var start = new Date().getTime(),
+        timer = setInterval(function() {
+            var step = Math.min(1,(new Date().getTime()-start)/time);
+                document.body["scrollTop"] = (from+step*(to-from))+"";
+            if( step == 1) clearInterval(timer);
+        },25);
+    document.body.style["scrollTop"] = from+"";
+};
+
+function goTo(fro, to) {
+    animate(document.getElementById(fro).offsetTop, document.getElementById(to).offsetTop, 500);
+    return false;
+};
 	</script>
 
 	<!-- google analytics -->
