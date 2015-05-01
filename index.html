@@ -12,9 +12,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
+
 	<meta name="description" content="Haroen Viaene is a student programmer from Belgium. Interested in space. Getting average in a lot of things.">
 
-	<script src="random.js"></script>
 	<link rel="stylesheet" href="style.css"/>
 	<link rel="icon" type="image/png" href="favicon.png" />
 </head>
@@ -144,6 +144,38 @@
 			<li><a target="_blank" href="mailto:%22Haroen%20Viaene%22%20%3chello@haroen.me%3e?subject=Job%20offering">Your job here?</a></li>
 		</ul>
 	</section>
+
+	<!-- random generator -->
+	<script>
+		descriptions = new Array(
+			"student",
+			"git lover",
+			"open sourcer",
+			"programmer",
+			"nerd",
+			"space enthousiast",
+			"poweruser",
+			"meme",
+			"Belgian",
+			"gitch"
+			);
+
+		var oldIndex = 0;
+
+		function generate() {
+			index1 = Math.floor(Math.random() * descriptions.length);
+			if (index1 == oldIndex) {
+				if (index1 == 0) {
+					index1 = descriptions.length-1;
+				} else {
+					index1--;
+				};
+			};
+			var desc= descriptions[index1];
+			document.getElementById("generated").innerHTML = desc;
+			oldIndex = index1;
+		}
+	</script>
 
 	<!-- google analytics -->
 	<script>
