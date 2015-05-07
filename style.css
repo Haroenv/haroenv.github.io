@@ -76,7 +76,7 @@ h1, h2.main {
 
 /* Button */
 
-.button {
+button {
 	-webkit-border-radius: 3;
 	-moz-border-radius: 3;
 	border-radius: 3px;
@@ -89,7 +89,7 @@ h1, h2.main {
 	transition: background-color .2s, color .2s, border-color .2s;
 }
 
-.button:hover {
+button:hover {
 	color: #fff;
 	background: #7F1734;
 	border: solid #fff 1px;
