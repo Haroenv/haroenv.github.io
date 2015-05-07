@@ -76,9 +76,7 @@ h1, h2.main {
 
 /* Button */
 
-button {
-	-webkit-border-radius: 3;
-	-moz-border-radius: 3;
+.button {
 	border-radius: 3px;
 	color: #7F1734;
 	font-size: 20px;
@@ -86,10 +84,10 @@ button {
 	padding: 10px 20px 10px 20px;
 	text-decoration: none;
 	border: solid #7F1734 1px;
-	transition: background-color .2s, color .2s, border-color .2s;
+	transition: all 500ms cubic-bezier(1.000, 0.010, 0.000, 1.005);
 }
 
-button:hover {
+.button:hover {
 	color: #fff;
 	background: #7F1734;
 	border: solid #fff 1px;
@@ -130,6 +128,7 @@ p#generated {
 	text-rendering: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	-webkit-transform: translate(0, 0);
 	transform: translate(0, 0);
 	padding-right: 0.3rem;
 	vertical-align: top;
@@ -219,4 +218,22 @@ h3.competencies {
 .list li {
 	list-style-type: none;
 	margin-top: 1rem;
+}
+
+/* 404 things */
+
+.search {
+	fill: deepPink;
+	transition: all 300ms cubic-bezier(1.000, 0.010, 0.000, 1.005);
+	-webkit-transform: scale(1) rotate(0deg);
+	transform: scale(1) rotate(0deg);
+}
+
+.search:hover {
+	-webkit-transform: scale(0.9) rotate(3deg);
+	transform: scale(0.9) rotate(3deg);
+}
+
+.mark:hover {
+	fill: #ccc;
 }
