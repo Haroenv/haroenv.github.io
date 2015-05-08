@@ -134,24 +134,24 @@ p#generated {
 
 .icons::before {
   display: inline-block;
-  font-size: inherit;
   font: normal normal normal 14px/1 FontAwesome;
-  padding-right: .3rem;
+  font-size: inherit;
   text-rendering: auto;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
+  padding-right: 0.3rem;
   vertical-align: top;
 }
 
-.github::before { content: "\f09b"; }
-.codepen::before { content: "\f1cb"; }
-.twitter::before { content: "\f099"; }
-.instagram::before { content: "\f16d"; }
-.envelope::before { content: "\f0e0"; }
+.github::before        { content: "\f09b"; }
+.codepen::before       { content: "\f1cb"; }
+.twitter::before       { content: "\f099"; }
+.instagram::before     { content: "\f16d"; }
+.envelope::before      { content: "\f0e0"; }
 .space-shuttle::before { content: "\f197"; }
-.file::before { content: "\f15b"; }
+.file::before          { content: "\f15b"; }
 
 // competencies
 

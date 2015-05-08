@@ -88,14 +88,14 @@ p#generated {
 
 .icons::before {
   display: inline-block;
-  font-size: inherit;
   font: normal normal normal 14px/1 FontAwesome;
-  padding-right: .3rem;
+  font-size: inherit;
   text-rendering: auto;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
+  padding-right: 0.3rem;
   vertical-align: top; }
 
 .github::before {
