@@ -233,17 +233,24 @@ h3.competencies {
 // 404 things
 
 .search {
-  fill: deepPink;
   -webkit-transform: scale(1) rotate(0deg);
   transform: scale(1) rotate(0deg);
   transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
+
+  path {
+    fill: $foreground;
+  }
+
+  .mark {
+    fill: $foreground;
+  }
+
+  .mark:hover {
+    fill: $alternate;
+  }
 }
 
 .search:hover {
   -webkit-transform: scale(.9) rotate(3deg);
   transform: scale(.9) rotate(3deg);
-}
-
-.mark:hover {
-  fill: $alternate;
 }

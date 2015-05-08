@@ -192,16 +192,18 @@ h3.competencies {
   margin-top: 1rem; }
 
 .search {
-  fill: deepPink;
   -webkit-transform: scale(1) rotate(0deg);
   transform: scale(1) rotate(0deg);
   transition: all 300ms cubic-bezier(1, 0.01, 0, 1.005); }
+  .search path {
+    fill: #fff; }
+  .search .mark {
+    fill: #fff; }
+  .search .mark:hover {
+    fill: #ccc; }
 
 .search:hover {
   -webkit-transform: scale(0.9) rotate(3deg);
   transform: scale(0.9) rotate(3deg); }
-
-.mark:hover {
-  fill: #ccc; }
 
 /*# sourceMappingURL=style.css.map */
