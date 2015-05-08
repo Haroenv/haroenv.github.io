@@ -87,37 +87,37 @@ p#generated {
       padding: .5rem; }
 
 .icons::before {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-transform: translate(0, 0);
   display: inline-block;
   font-size: inherit;
   font: normal normal normal 14px/1 FontAwesome;
   padding-right: .3rem;
   text-rendering: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   vertical-align: top; }
 
 .github::before {
-  content: '\f09b'; }
+  content: "\f09b"; }
 
 .codepen::before {
-  content: '\f1cb'; }
+  content: "\f1cb"; }
 
 .twitter::before {
-  content: '\f099'; }
+  content: "\f099"; }
 
 .instagram::before {
-  content: '\f16d'; }
+  content: "\f16d"; }
 
 .envelope::before {
-  content: '\f0e0'; }
+  content: "\f0e0"; }
 
 .space-shuttle::before {
-  content: '\f197'; }
+  content: "\f197"; }
 
 .file::before {
-  content: '\f15b'; }
+  content: "\f15b"; }
 
 li.marks {
   display: inline-block;
