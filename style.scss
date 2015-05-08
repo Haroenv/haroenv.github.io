@@ -3,6 +3,12 @@ $background: #7f1734;
 $foreground: #fff;
 $alternate: #ccc;
 
+$small: 1.3rem;
+$normal: 2rem;
+$large: 6rem;
+$huge: 6rem;
+
+
 // General stying
 
 html {
@@ -12,11 +18,7 @@ html {
 @font-face {
   font-family: 'FontAwesome';
   src: url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),
-  url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),
-  url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),
-  url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),
-  url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -65,7 +67,7 @@ ul {
   position: absolute;
 }
 
-.long-arrow-down::before { content: '"'\f175'"'; }
+.long-arrow-down::before { content: '\f175'; }
 
 @media screen and (min-height: 600px) {
   .arrow {
@@ -80,7 +82,7 @@ ul {
 }
 
 h1, h2.main {
-  font-size: 4rem;
+  font-size: $large;
 }
 
 // Button
@@ -90,7 +92,7 @@ h1, h2.main {
   border: solid $background 1px;
   border-radius: 3px;
   color: $background;
-  font-size: 20px;
+  font-size: $normal;
   padding: 1rem 2rem;
   text-decoration: none;
   transition: all 500ms cubic-bezier(1, .010, 0, 1.005);
@@ -104,7 +106,7 @@ h1, h2.main {
 }
 
 p#generated {
-  font-size: 6rem;
+  font-size: $huge;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
@@ -119,7 +121,7 @@ p#generated {
 
   li {
     display: inline-block;
-    font-size: 1.3rem;
+    font-size: $small;
     text-transform: uppercase;
 
     a {
@@ -179,13 +181,13 @@ li.marks {
 }
 
 .items p {
-  font-size: 1.3rem;
+  font-size: $small;
   margin: .5rem;
   text-transform: uppercase;
 }
 
 h3.competencies {
-  font-size: 2rem;
+  font-size: $normal;
   margin: 1.5rem 0;
   text-transform: uppercase;
 }
@@ -206,7 +208,7 @@ h3.competencies {
 .level::after {
   background: $background;
   border-radius: .3rem;
-  content: '"''"';
+  content: '';
   height: 1rem;
   left: 1px;
   margin: 0 auto;

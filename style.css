@@ -40,7 +40,7 @@ ul {
   position: absolute; }
 
 .long-arrow-down::before {
-  content: '"' \f175 '"'; }
+  content: '\f175'; }
 
 @media screen and (min-height: 600px) {
   .arrow {
@@ -49,14 +49,14 @@ ul {
   .arrow {
     display: none; } }
 h1, h2.main {
-  font-size: 4rem; }
+  font-size: 6rem; }
 
 .button {
   background: #fff;
   border: solid #7f1734 1px;
   border-radius: 3px;
   color: #7f1734;
-  font-size: 20px;
+  font-size: 2rem;
   padding: 1rem 2rem;
   text-decoration: none;
   transition: all 500ms cubic-bezier(1, 0.01, 0, 1.005); }
@@ -161,7 +161,7 @@ h3.competencies {
 .level::after {
   background: #7f1734;
   border-radius: .3rem;
-  content: '"' '"';
+  content: '';
   height: 1rem;
   left: 1px;
   margin: 0 auto;
