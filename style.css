@@ -1,4 +1,3 @@
-/* General stying */
 html {
   font-size: 62.5%; }
 
@@ -9,12 +8,12 @@ html {
   font-weight: normal;
   font-style: normal; }
 body {
+  background-color: #7f1734;
+  color: #fff;
   font-family: sans-serif;
   font-weight: bolder;
-  color: #fff;
   text-align: center;
-  font-size: 1.6rem;
-  background-color: #7F1734; }
+  font-size: 1.6rem; }
 
 a {
   color: #fff; }
@@ -28,10 +27,8 @@ ul {
 .fullpage {
   height: 90vh;
   padding-top: 10vh;
-  /*border: 1px dotted #000;*/
   position: relative; }
 
-/* on mobile, the header is too high, and the arrow wouldn't fit */
 @media screen and (max-height: 600px), (max-width: 470px) {
   .fullpage {
     height: 100%;
@@ -54,44 +51,40 @@ ul {
 h1, h2.main {
   font-size: 4rem; }
 
-/* Button */
 .button {
   border-radius: 3px;
-  color: #7F1734;
+  color: #7f1734;
   font-size: 20px;
   background: #fff;
-  padding: 10px 20px 10px 20px;
+  padding: 1rem 2rem;
   text-decoration: none;
-  border: solid #7F1734 1px;
+  border: solid #7f1734 1px;
   transition: all 500ms cubic-bezier(1, 0.01, 0, 1.005); }
 
 .button:hover {
   color: #fff;
-  background: #7F1734;
+  background: #7f1734;
   border: solid #fff 1px;
   cursor: pointer; }
 
 p#generated {
   font-size: 6rem;
-  -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
+  -webkit-hyphens: auto;
   hyphens: auto; }
 
-/* Social icons */
 .social ul {
   padding: 3rem;
   padding-top: 1rem; }
-
-.social ul li {
-  display: inline-block;
-  font-size: 1.3rem;
-  text-transform: uppercase; }
-
-.social ul li a {
-  text-decoration: none;
-  margin: 1rem;
-  padding: 0.5rem; }
+  .social ul li {
+    display: inline-block;
+    font-size: 1.3rem;
+    text-transform: uppercase; }
+    .social ul li a {
+      text-decoration: none;
+      margin: 1rem;
+      padding: .5rem; }
 
 .icons::before {
   display: inline-block;
@@ -102,31 +95,30 @@ p#generated {
   -moz-osx-font-smoothing: grayscale;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
-  padding-right: 0.3rem;
+  padding-right: .3rem;
   vertical-align: top; }
 
 .github::before {
-  content: "\f09b"; }
+  content: '\f09b'; }
 
 .codepen::before {
-  content: "\f1cb"; }
+  content: '\f1cb'; }
 
 .twitter::before {
-  content: "\f099"; }
+  content: '\f099'; }
 
 .instagram::before {
-  content: "\f16d"; }
+  content: '\f16d'; }
 
 .envelope::before {
-  content: "\f0e0"; }
+  content: '\f0e0'; }
 
 .space-shuttle::before {
-  content: "\f197"; }
+  content: '\f197'; }
 
 .file::before {
-  content: "\f15b"; }
+  content: '\f15b'; }
 
-/* competencies */
 li.marks {
   display: inline-block;
   margin: 1rem;
@@ -149,7 +141,7 @@ li.marks ul {
 ul.items p {
   font-size: 1.3rem;
   text-transform: uppercase;
-  margin: 0.5rem; }
+  margin: .5rem; }
 
 h3.competencies {
   text-transform: uppercase;
@@ -162,7 +154,7 @@ h3.competencies {
   width: 10rem;
   height: 1rem;
   background: #fff;
-  border-radius: 0.3rem;
+  border-radius: .3rem;
   position: relative;
   padding: 1px;
   margin: 0 auto; }
@@ -171,8 +163,8 @@ h3.competencies {
   z-index: 1;
   content: "";
   height: 1rem;
-  background: #7F1734;
-  border-radius: 0.3rem;
+  background: #7f1734;
+  border-radius: .3rem;
   position: absolute;
   left: 1px;
   top: 1px;
