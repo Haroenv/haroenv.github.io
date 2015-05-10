@@ -183,20 +183,20 @@
 
 	<!-- scrolling -->
 	<script>
-function animate(from,to,time) {
-    var start = new Date().getTime(),
-        timer = setInterval(function() {
-            var step = Math.min(1,(new Date().getTime()-start)/time);
-                document.body["scrollTop"] = (from+step*(to-from))+"";
-            if( step == 1) clearInterval(timer);
-        },25);
-    document.body.style["scrollTop"] = from+"";
-};
+		function animate(from,to,time) {
+			var start = new Date().getTime(),
+			timer = setInterval(function() {
+				var step = Math.min(1,(new Date().getTime()-start)/time);
+				document.body["scrollTop"] = (from+step*(to-from))+"";
+				if( step == 1) clearInterval(timer);
+			},25);
+			document.body.style["scrollTop"] = from+"";
+		};
 
-function goTo(fro, to) {
-    animate(document.getElementById(fro).offsetTop, document.getElementById(to).offsetTop, 500);
-    return false;
-};
+		function goTo(fro, to) {
+			animate(document.getElementById(fro).offsetTop, document.getElementById(to).offsetTop, 500);
+			return false;
+		};
 	</script>
 
 	<!-- google analytics -->
