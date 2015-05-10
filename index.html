@@ -4,210 +4,201 @@
 	@author Haroen Viaene <hello@haroen.me>
 -->
 <html lang="en">
+
 <head>
-	<title> Haroen Viaene </title>
-
-	<meta charset="utf-8" />
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="mobile-web-app-capable" content="yes" />
-
-	<meta name="description" content="Haroen Viaene is a student programmer from Belgium. Interested in space. Getting average in a lot of things." />
-	<meta name="keywords" content="haroen, viaene, Haroen Viaene, web, dev, programmer, personal, site, bruges, brugge, belgium, jwr, jcw, euro space, odisee, gent, ghent, open source, github, oss, js, java, os x, apple, latex, webdev, twitter" />
-
-	<link rel="stylesheet" href="style.css"/>
-	<link rel="icon" type="image/png" href="/favicon.png" />
-	<link rel="apple-touch-icon" href="apple-touch-icon-iphone.png" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
+    <title> Haroen Viaene </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="description" content="Haroen Viaene is a student programmer from Belgium. Interested in space. Getting average in a lot of things." />
+    <meta name="keywords" content="haroen, viaene, Haroen Viaene, web, dev, programmer, personal, site, bruges, brugge, belgium, jwr, jcw, euro space, odisee, gent, ghent, open source, github, oss, js, java, os x, apple, latex, webdev, twitter" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
+
 <body>
-	<!-- intro/main -->
-	<section class="fullpage" id="main">
-		<h1>Haroen Viaene</h1>
+    <!-- intro/main -->
+    <section class="fullpage" id="main">
+        <h1>Haroen Viaene</h1>
+        <button class="button" id="generator" onclick="generate()">is a </button>
+        <p id="generated">student</p>
+        <div class="social" id="social">
+            <h2>Contact me:</h2>
+            <ul>
+                <li>
+                    <a class="icons github" target="_blank" href="https://github.com/haroenv">Github</a>
+                </li>
+                <li>
+                    <a class="icons codepen" target="_blank" href="http://codepen.io/Haroenv/">Codepen</a>
+                </li>
+                <li>
+                    <a class="icons twitter" target="_blank" href="https://twitter.com/haroenv">Twitter</a>
+                </li>
+                <li>
+                    <a class="icons instagram" target="_blank" href="https://instagram.com/haroenv/">Instagram</a>
+                </li>
+                <li>
+                    <a class="icons envelope" target="_blank" href="mailto:%22Haroen%20Viaene%22%20%3chello@haroen.me%3e">email</a>
+                </li>
+                <li>
+                    <a class="icons space-shuttle" target="_blank" href="http://jwronline.be">youth club</a>
+                </li>
+                <li>
+                    <a class="icons file" target="_blank" href="cv">cv</a>
+                </li>
+            </ul>
+        </div>
+        <a href="#competencies" onclick="return goTo('main', 'competencies')" class="icons arrow long-arrow-down"></a>
+    </section>
+    <!-- competencies -->
+    <section class="fullpage" id="competencies">
+        <h2 class="main">Competencies</h2>
+        <ul class="competencies">
+            <li class="marks">
+                <h3 class="competencies">Languages</h3>
+                <ul class="items">
+                    <li>
+                        <p>Dutch: C2</p>
+                        <div class="level level-C2" title="IELTS C2"></div>
+                    </li>
+                    <li>
+                        <p>English: C1</p>
+                        <div class="level level-C1" title="IELTS C1"></div>
+                    </li>
+                    <li>
+                        <p>French: B2</p>
+                        <div class="level level-B2" title="IELTS B2"></div>
+                    </li>
+                </ul>
+            </li>
+            <li class="marks">
+                <h3 class="competencies">Programming</h3>
+                <ul class="items">
+                    <li>
+                        <p>Java</p>
+                        <div class="level level-5" title="5/10"></div>
+                    </li>
+                    <li>
+                        <p>HTML/CSS</p>
+                        <div class="level level-5" title="5/10"></div>
+                    </li>
+                    <li>
+                        <p>Bash</p>
+                        <div class="level level-5" title="5/10"></div>
+                    </li>
+                    <li>
+                        <p>LaTeX</p>
+                        <div class="level level-6" title="6/10"></div>
+                    </li>
+                </ul>
+            </li>
+            <li class="marks">
+                <h3 class="competencies">Skills</h3>
+                <ul class="items">
+                    <li>
+                        <p>Photoshop</p>
+                        <div class="level level-5" title="5/10"></div>
+                    </li>
+                    <li>
+                        <p>OS X</p>
+                        <div class="level level-8" title="8/10"></div>
+                    </li>
+                    <li>
+                        <p>Linux</p>
+                        <div class="level level-7" title="7/10"></div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#education" onclick="return goTo('competencies', 'education')" class="icons arrow long-arrow-down"></a>
+    </section>
+    <!-- education -->
+    <section class="fullpage" id="education">
+        <h2 class="main">Education</h2>
+        <ul class="list">
+            <li>animator for a youth movement</li>
+            <li>secondary education sciences-maths</li>
+            <li>professional bachelor <a target="_blank" href="http://odisee.be/Odisee/Sections/Dutch-Programmes/Courses-Odisee-Technology/Courses-Odisee-Technology-Electronics-ICT.html">electronics-information technology</a> (in progress)</li>
+        </ul>
+        <a href="#jobs" onclick="return goTo('education', 'jobs')" class="icons arrow long-arrow-down"></a>
+    </section>
+    <!-- jobs -->
+    <section class="fullpage" id="jobs">
+        <h2 class="main">Jobs</h2>
+        <ul class="list">
+            <li><a target="_blank" href="http://www.jwronline.be">JWR</a> &mdash; animator, administration</li>
+            <li><a target="_blank" href="http://www.eurospacecenter.be">Euro Space Center</a> &mdash; animator, tours</li>
+            <li><a target="_blank" href="mailto:%22Haroen%20Viaene%22%20%3chello@haroen.me%3e?subject=Job%20offering">Your job here?</a></li>
+        </ul>
+    </section>
+    <!-- random generator -->
+    <script>
+    descriptions = new Array(
+        "student",
+        "git lover",
+        "open sourcer",
+        "programmer",
+        "nerd",
+        "space enthousiast",
+        "poweruser",
+        "meme",
+        "Belgian",
+        "gitch"
+    );
 
-		<button class="button" id="generator" onclick="generate()">is a </button>
-		<p id="generated">student</p>
+    var oldIndex = 0;
 
-		<div class="social" id="social">
-			<h2>Contact me:</h2>
-			<ul>
-				<li>
-					<a class="icons github" target="_blank" href="https://github.com/haroenv">Github</a>
-				</li>
-				<li>
-					<a class="icons codepen" target="_blank" href="http://codepen.io/Haroenv/">Codepen</a>
-				</li>
-				<li>
-					<a class="icons twitter" target="_blank" href="https://twitter.com/haroenv">Twitter</a>
-				</li>
-				<li>
-					<a class="icons instagram" target="_blank" href="https://instagram.com/haroenv/">Instagram</a>
-				</li>
-				<li>
-					<a class="icons envelope" target="_blank" href="mailto:%22Haroen%20Viaene%22%20%3chello@haroen.me%3e">email</a>
-				</li>
-				<li>
-					<a class="icons space-shuttle" target="_blank" href="http://jwronline.be">youth club</a>
-				</li>
-				<li>
-					<a  class="icons file" target="_blank" href="cv">cv</a>
-				</li>
-			</ul>
-		</div>
+    function generate() {
+        index1 = Math.floor(Math.random() * descriptions.length);
+        if (index1 == oldIndex) {
+            if (index1 == 0) {
+                index1 = descriptions.length - 1;
+            } else {
+                index1--;
+            };
+        };
+        var desc = descriptions[index1];
+        document.getElementById("generated").innerHTML = desc;
+        oldIndex = index1;
+    }
+    </script>
+    <!-- scrolling -->
+    <script>
+    function animate(from, to, time) {
+        var start = new Date().getTime(),
+            timer = setInterval(function() {
+                var step = Math.min(1, (new Date().getTime() - start) / time);
+                document.body["scrollTop"] = (from + step * (to - from)) + "";
+                if (step == 1) clearInterval(timer);
+            }, 25);
+        document.body.style["scrollTop"] = from + "";
+    };
 
-		<a href="#competencies" onclick="return goTo('main', 'competencies')" class="icons arrow long-arrow-down"></a>
-	</section>
+    function goTo(fro, to) {
+        animate(document.getElementById(fro).offsetTop, document.getElementById(to).offsetTop, 500);
+        return false;
+    };
+    </script>
+    <!-- google analytics -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-	<!-- competencies -->
-	<section class="fullpage" id="competencies">
-
-		<h2 class="main">Competencies</h2>
-		<ul class="competencies">
-			<li class="marks">
-				<h3 class="competencies">Languages</h3>
-				<ul class="items">
-					<li>
-						<p>Dutch: C2</p>
-						<div class="level level-C2" title="IELTS C2"></div>
-					</li>
-					<li>
-						<p>English: C1</p>
-						<div class="level level-C1" title="IELTS C1"></div>
-					</li>
-					<li>
-						<p>French: B2</p>
-						<div class="level level-B2" title="IELTS B2"></div>
-					</li>
-				</ul>
-			</li>
-
-			<li class="marks">
-				<h3 class="competencies">Programming</h3>
-				<ul class="items">
-					<li>
-						<p>Java</p>
-						<div class="level level-5" title="5/10"></div>
-					</li>
-					<li>
-						<p>HTML/CSS</p>
-						<div class="level level-5" title="5/10"></div>
-					</li>
-					<li>
-						<p>Bash</p>
-						<div class="level level-5" title="5/10"></div>
-					</li>
-					<li>
-						<p>LaTeX</p>
-						<div class="level level-6" title="6/10"></div>
-					</li>
-				</ul>
-			</li>
-
-			<li class="marks">
-				<h3 class="competencies">Skills</h3>
-				<ul class="items">
-					<li>
-						<p>Photoshop</p>
-						<div class="level level-5" title="5/10"></div>
-					</li>
-					<li>
-						<p>OS X</p>
-						<div class="level level-8" title="8/10"></div>
-					</li>
-					<li>
-						<p>Linux</p>
-						<div class="level level-7" title="7/10"></div>
-					</li>
-				</ul>
-			</li>
-		</ul>
-
-		<a href="#education" onclick="return goTo('competencies', 'education')"  class="icons arrow long-arrow-down"></a>
-	</section>
-
-	<!-- education -->
-	<section class="fullpage" id="education">
-		<h2 class="main">Education</h2>
-		<ul class="list">
-			<li>animator for a youth movement</li>
-			<li>secondary education sciences-maths</li>
-			<li>professional bachelor <a target="_blank" href="http://odisee.be/Odisee/Sections/Dutch-Programmes/Courses-Odisee-Technology/Courses-Odisee-Technology-Electronics-ICT.html">electronics-information technology</a> (in progress)</li>
-		</ul>
-
-		<a href="#jobs" onclick="return goTo('education', 'jobs')" class="icons arrow long-arrow-down"></a>
-	</section>
-
-	<!-- jobs -->
-	<section class="fullpage" id="jobs">
-		<h2 class="main">Jobs</h2>
-		<ul class="list">
-			<li><a target="_blank" href="http://www.jwronline.be">JWR</a> &mdash; animator, administration</li>
-			<li><a target="_blank" href="http://www.eurospacecenter.be">Euro Space Center</a> &mdash; animator, tours</li>
-			<li><a target="_blank" href="mailto:%22Haroen%20Viaene%22%20%3chello@haroen.me%3e?subject=Job%20offering">Your job here?</a></li>
-		</ul>
-	</section>
-
-	<!-- random generator -->
-	<script>
-		descriptions = new Array(
-			"student",
-			"git lover",
-			"open sourcer",
-			"programmer",
-			"nerd",
-			"space enthousiast",
-			"poweruser",
-			"meme",
-			"Belgian",
-			"gitch"
-			);
-
-		var oldIndex = 0;
-
-		function generate() {
-			index1 = Math.floor(Math.random() * descriptions.length);
-			if (index1 == oldIndex) {
-				if (index1 == 0) {
-					index1 = descriptions.length-1;
-				} else {
-					index1--;
-				};
-			};
-			var desc= descriptions[index1];
-			document.getElementById("generated").innerHTML = desc;
-			oldIndex = index1;
-		}
-	</script>
-
-	<!-- scrolling -->
-	<script>
-		function animate(from,to,time) {
-			var start = new Date().getTime(),
-			timer = setInterval(function() {
-				var step = Math.min(1,(new Date().getTime()-start)/time);
-				document.body["scrollTop"] = (from+step*(to-from))+"";
-				if( step == 1) clearInterval(timer);
-			},25);
-			document.body.style["scrollTop"] = from+"";
-		};
-
-		function goTo(fro, to) {
-			animate(document.getElementById(fro).offsetTop, document.getElementById(to).offsetTop, 500);
-			return false;
-		};
-	</script>
-
-	<!-- google analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-27277115-3', 'auto');
-		ga('send', 'pageview');
-	</script>
+    ga('create', 'UA-27277115-3', 'auto');
+    ga('send', 'pageview');
+    </script>
 </body>
+
 </html>
