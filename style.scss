@@ -107,6 +107,7 @@ h1, h2.main {
 
 p#generated {
   font-size: $huge;
+  word-wrap: break-word;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   -webkit-hyphens: auto;
