@@ -21,6 +21,9 @@ a {
 a:hover {
   color: #ccc; }
 
+code {
+  font-family: Monaco, 'Courier New', monospace; }
+
 ul {
   padding-left: 0; }
 
@@ -206,5 +209,3 @@ h3.competencies {
 .search:hover {
   -webkit-transform: scale(0.9) rotate(3deg);
   transform: scale(0.9) rotate(3deg); }
-
-/*# sourceMappingURL=style.css.map */
