@@ -243,6 +243,24 @@
 		ga('create', 'UA-27277115-3', 'auto');
 		ga('send', 'pageview');
 	</script>
+	<!-- konami code -->
+	<script src="https://cdn.rawgit.com/snaptortoise/konami-js/master/konami.js"></script>
+	<script>
+		function loadcss(url) {
+			var head = document.getElementsByTagName('head')[0],
+			link = document.createElement('link');
+			link.type = 'text/css';
+			link.rel = 'stylesheet';
+			link.href = url;
+			head.insertBefore(link, head.childNodes[0]);
+			return link;
+		}
+		function cssSwitch() {
+			loadcss('/s/konami.css');
+		}
+
+		var easter_egg = new Konami(cssSwitch);
+	</script>
 </body>
 
 </html>
