@@ -38,13 +38,13 @@ ul {
     height: 100%;
     padding-bottom: 6vh;
     padding-top: 0; } }
+.long-arrow-down::before {
+  content: '\f175'; }
+
 .arrow {
   bottom: 2vh;
   font-size: 2em;
   position: absolute; }
-
-.long-arrow-down::before {
-  content: '\f175'; }
 
 @media screen and (min-height: 600px) {
   .arrow {
@@ -153,32 +153,37 @@ h3.competencies {
   text-transform: uppercase; }
 
 .level {
-  background: #fff;
-  border-radius: .3rem;
-  height: 1rem;
   margin: 0 auto;
-  padding: 1px;
-  position: relative;
+  z-index: 0;
   width: 10rem;
-  z-index: 0; }
+  height: 1rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  padding: 1px;
+  position: relative; }
   .level::after {
-    background: #7f1734;
-    border-radius: .3rem;
-    content: '';
+    z-index: 1;
+    content: "";
     height: 1rem;
-    left: 1px;
-    margin: 0 auto;
+    background: #7f1734;
+    border-radius: 0.3rem;
     position: absolute;
-    top: 1px;
-    z-index: 1; }
+    left: 1px;
+    top: 1px; }
+
+.level-1::after {
+  width: 1rem; }
+
+.level-2::after {
+  width: 2rem; }
 
 .level-3::after {
   width: 3rem; }
 
-.level-3::after {
+.level-4::after {
   width: 4rem; }
 
-.level-3::after {
+.level-5::after {
   width: 5rem; }
 
 .level-B2::after,
@@ -192,7 +197,7 @@ h3.competencies {
 .level-8::after {
   width: 8rem; }
 
-.level-3::after {
+.level-9::after {
   width: 9rem; }
 
 .level-C2::after,
