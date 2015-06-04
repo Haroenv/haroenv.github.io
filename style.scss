@@ -238,19 +238,11 @@ $radius: 0.3*$height;
 }
 
 // the length of the foreground
-.level-1::after  { width: $width*1/10;  }
-.level-2::after  { width: $width*2/10;  }
-.level-3::after  { width: $width*3/10;  }
-.level-4::after  { width: $width*4/10;  }
-.level-5::after  { width: $width*5/10;  }
-.level-B2::after,
-.level-6::after  { width: $width*6/10;  }
-.level-7::after  { width: $width*7/10;  }
-.level-C1::after,
-.level-8::after  { width: $width*8/10;  }
-.level-9::after  { width: $width*9/10;  }
-.level-C2::after,
-.level-10::after { width: $width*10/10; }
+@for $i from 1 through 10 {
+	.level-#{$i}::after {
+		width: $width*$i/10;
+	}
+}
 
 .list li {
   list-style-type: none;

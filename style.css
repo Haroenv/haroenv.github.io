@@ -193,21 +193,18 @@ h3.competencies {
 .level-5::after {
   width: 5rem; }
 
-.level-B2::after,
 .level-6::after {
   width: 6rem; }
 
 .level-7::after {
   width: 7rem; }
 
-.level-C1::after,
 .level-8::after {
   width: 8rem; }
 
 .level-9::after {
   width: 9rem; }
 
-.level-C2::after,
 .level-10::after {
   width: 10rem; }
 
