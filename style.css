@@ -10,9 +10,8 @@ html {
 body {
   background-color: #7f1734;
   color: #fff;
-  font-family: sans-serif;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
-  font-weight: bolder;
   text-align: center; }
 
 a {
@@ -57,7 +56,7 @@ h1, h2.main {
 .button {
   background: #fff;
   border: solid #7f1734 1px;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #7f1734;
   font-size: 2rem;
   padding: 1rem 2rem;

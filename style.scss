@@ -26,9 +26,8 @@ html {
 body {
   background-color: $background;
   color: $foreground;
-  font-family: sans-serif;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
-  font-weight: bolder;
   text-align: center;
 }
 
@@ -94,7 +93,7 @@ h1, h2.main {
 .button {
   background: $foreground;
   border: solid $background 1px;
-  border-radius: 3px;
+  border-radius: 5px;
   color: $background;
   font-size: $normal;
   padding: 1rem 2rem;
