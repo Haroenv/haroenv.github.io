@@ -65,8 +65,8 @@ h1, h2.main {
   transition: all 300ms cubic-bezier(1, 0.01, 0, 1.005);
   background-clip: border; }
   .button:hover {
-    background: #7f1734;
-    box-shadow: inset 0px 0px 0px 1px #fff;
+    background: none;
+    box-shadow: inset 0 0 0 1px #fff;
     color: #fff;
     cursor: pointer; }
 
