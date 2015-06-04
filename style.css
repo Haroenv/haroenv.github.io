@@ -1,6 +1,9 @@
 html {
   font-size: 62.5%; }
 
+* {
+  font-weight: 100; }
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
@@ -16,9 +19,8 @@ body {
 
 a {
   color: #fff; }
-
-a:hover {
-  color: #ccc; }
+  a:hover {
+    color: #ccc; }
 
 code {
   font-family: Monaco, 'Courier New', monospace; }
@@ -62,12 +64,11 @@ h1, h2.main {
   padding: 1rem 2rem;
   text-decoration: none;
   transition: all 500ms cubic-bezier(1, 0.01, 0, 1.005); }
-
-.button:hover {
-  background: #7f1734;
-  border: solid #fff 1px;
-  color: #fff;
-  cursor: pointer; }
+  .button:hover {
+    background: #7f1734;
+    border: solid #fff 1px;
+    color: #fff;
+    cursor: pointer; }
 
 p#generated {
   font-size: 6rem;
@@ -160,20 +161,25 @@ h3.competencies {
   position: relative;
   width: 10rem;
   z-index: 0; }
-
-.level::after {
-  background: #7f1734;
-  border-radius: .3rem;
-  content: '';
-  height: 1rem;
-  left: 1px;
-  margin: 0 auto;
-  position: absolute;
-  top: 1px;
-  z-index: 1; }
+  .level::after {
+    background: #7f1734;
+    border-radius: .3rem;
+    content: '';
+    height: 1rem;
+    left: 1px;
+    margin: 0 auto;
+    position: absolute;
+    top: 1px;
+    z-index: 1; }
 
 .level-3::after {
   width: 3rem; }
+
+.level-3::after {
+  width: 4rem; }
+
+.level-3::after {
+  width: 5rem; }
 
 .level-B2::after,
 .level-6::after {
@@ -185,6 +191,9 @@ h3.competencies {
 .level-C1::after,
 .level-8::after {
   width: 8rem; }
+
+.level-3::after {
+  width: 9rem; }
 
 .level-C2::after,
 .level-10::after {
@@ -204,9 +213,8 @@ h3.competencies {
     fill: #fff; }
   .search .mark:hover {
     fill: #ccc; }
-
-.search:hover {
-  -webkit-transform: scale(0.9) rotate(3deg);
-  transform: scale(0.9) rotate(3deg); }
+  .search:hover {
+    -webkit-transform: scale(0.9) rotate(3deg);
+    transform: scale(0.9) rotate(3deg); }
 
 /*# sourceMappingURL=style.css.map */
