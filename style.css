@@ -57,16 +57,16 @@ h1, h2.main {
 
 .button {
   background: #fff;
-  border: solid #7f1734 1px;
   border-radius: 5px;
   color: #7f1734;
   font-size: 2rem;
   padding: 1rem 2rem;
   text-decoration: none;
-  transition: all 500ms cubic-bezier(1, 0.01, 0, 1.005); }
+  transition: all 300ms cubic-bezier(1, 0.01, 0, 1.005);
+  background-clip: border; }
   .button:hover {
     background: #7f1734;
-    border: solid #fff 1px;
+    box-shadow: inset 0px 0px 0px 1px #fff;
     color: #fff;
     cursor: pointer; }
 
