@@ -108,6 +108,10 @@ h1, h2.main {
     color: $foreground;
     cursor: pointer;
   }
+
+  &:active {
+    box-shadow: inset 0 0 0 2px $foreground;
+  }
 }
 
 p#generated {

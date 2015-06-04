@@ -69,6 +69,8 @@ h1, h2.main {
     box-shadow: inset 0 0 0 1px #fff;
     color: #fff;
     cursor: pointer; }
+  .button:active {
+    box-shadow: inset 0 0 0 2px #fff; }
 
 p#generated {
   font-size: 6rem;
