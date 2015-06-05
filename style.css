@@ -32,12 +32,12 @@ ul {
   height: 90vh;
   padding-top: 10vh;
   position: relative; }
+  @media screen and (max-height: 600px), (max-width: 470px) {
+    .fullpage {
+      height: 100%;
+      padding-bottom: 6vh;
+      padding-top: 0; } }
 
-@media screen and (max-height: 600px), (max-width: 470px) {
-  .fullpage {
-    height: 100%;
-    padding-bottom: 6vh;
-    padding-top: 0; } }
 .long-arrow-down::before {
   content: '\f175'; }
 
@@ -45,13 +45,13 @@ ul {
   bottom: 2vh;
   font-size: 2em;
   position: absolute; }
+  @media screen and (min-height: 600px) {
+    .arrow {
+      bottom: 4vh; } }
+  @media screen and (max-height: 540px) {
+    .arrow {
+      display: none; } }
 
-@media screen and (min-height: 600px) {
-  .arrow {
-    bottom: 4vh; } }
-@media screen and (max-height: 540px) {
-  .arrow {
-    display: none; } }
 h1, h2.main {
   font-size: 4rem; }
 

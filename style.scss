@@ -55,14 +55,12 @@ ul {
   height: 90vh;
   padding-top: 10vh;
   position: relative;
-}
 
-// on mobile, the header is too high, and the arrow wouldn't fit
-@media screen and (max-height: 600px) , (max-width: 470px) {
-  .fullpage {
-    height: 100%;
-    padding-bottom: 6vh;
-    padding-top: 0;
+  // on mobile, the header is too high, and the arrow wouldn't fit
+  @media screen and (max-height: 600px) , (max-width: 470px) {
+      height: 100%;
+      padding-bottom: 6vh;
+      padding-top: 0;
   }
 }
 
@@ -72,16 +70,12 @@ ul {
   bottom: 2vh;
   font-size: 2em;
   position: absolute;
-}
 
-@media screen and (min-height: 600px) {
-  .arrow {
+  @media screen and (min-height: 600px) {
     bottom: 4vh;
   }
-}
 
-@media screen and (max-height: 540px) {
-  .arrow {
+  @media screen and (max-height: 540px) {
     display: none;
   }
 }
@@ -239,9 +233,9 @@ $radius: 0.3*$height;
 
 // the length of the foreground
 @for $i from 1 through 10 {
-	.level-#{$i}::after {
-		width: $width*$i/10;
-	}
+  .level-#{$i}::after {
+    width: $width*$i/10;
+  }
 }
 
 .list li {
