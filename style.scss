@@ -202,11 +202,41 @@ h3.competencies {
 }
 
 // value bars
-$height: 1rem;
+$height: 1.2rem;
 $width: 10rem;
 $padding: 1px;
 $radius: 0.3*$height;
 
+// html5 meter
+
+meter {
+  width: $width;
+  height: $height;
+  border: $padding solid $foreground;
+  border-radius: $radius;
+  background: $foreground;
+
+  // webkit uses this as the background
+  &::-webkit-meter-bar {
+    background: none;
+  }
+
+  // and this as the foreground
+  &::-webkit-meter-optimum-value {
+    background: $background;
+    border: none;
+    border-radius: $radius;
+  }
+
+  // Gecko uses this as the foreground
+  &::-moz-meter-bar {
+    background: $background;
+    border: none;
+    border-radius: $radius;
+  }
+}
+
+// fallback
 // the background part
 .level {
   margin: 0 auto;

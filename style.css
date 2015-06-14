@@ -159,21 +159,38 @@ h3.competencies {
   margin: 1.5rem 0;
   text-transform: uppercase; }
 
+meter {
+  width: 10rem;
+  height: 1.2rem;
+  border: 1px solid #fff;
+  border-radius: 0.36rem;
+  background: #fff; }
+  meter::-webkit-meter-bar {
+    background: none; }
+  meter::-webkit-meter-optimum-value {
+    background: #7f1734;
+    border: none;
+    border-radius: 0.36rem; }
+  meter::-moz-meter-bar {
+    background: #7f1734;
+    border: none;
+    border-radius: 0.36rem; }
+
 .level {
   margin: 0 auto;
   z-index: 0;
   width: 10rem;
-  height: 1rem;
+  height: 1.2rem;
   background: #fff;
-  border-radius: 0.3rem;
+  border-radius: 0.36rem;
   padding: 1px;
   position: relative; }
   .level::after {
     z-index: 1;
     content: "";
-    height: 1rem;
+    height: 1.2rem;
     background: #7f1734;
-    border-radius: 0.3rem;
+    border-radius: 0.36rem;
     position: absolute;
     left: 1px;
     top: 1px; }
