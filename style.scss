@@ -13,6 +13,7 @@ $huge: 6rem;
 
 html {
   font-size: 62.5%;
+  background-color: $background;
 }
 
 * {
@@ -28,7 +29,6 @@ html {
 }
 
 body {
-  background-color: $background;
   color: $foreground;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
@@ -215,6 +215,7 @@ meter {
   border: $padding solid $foreground;
   border-radius: $radius;
   background: $foreground;
+  vertical-align: 0;
 
   // webkit uses this as the background
   &::-webkit-meter-bar {

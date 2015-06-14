@@ -1,5 +1,6 @@
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  background-color: #7f1734; }
 
 * {
   font-weight: 100; }
@@ -11,7 +12,6 @@ html {
   font-weight: normal;
   font-style: normal; }
 body {
-  background-color: #7f1734;
   color: #fff;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
@@ -164,7 +164,8 @@ meter {
   height: 1.2rem;
   border: 1px solid #fff;
   border-radius: 0.36rem;
-  background: #fff; }
+  background: #fff;
+  vertical-align: 0; }
   meter::-webkit-meter-bar {
     background: none; }
   meter::-webkit-meter-optimum-value {
