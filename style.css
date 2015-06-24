@@ -12,6 +12,7 @@ html {
   font-weight: normal;
   font-style: normal; }
 body {
+  margin: 0;
   color: #fff;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
