@@ -11,7 +11,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="mobile-web-app-capable" content="yes" />
 
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="/style.css"/>
 	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 	<link rel="icon" href="apple-touch-icon.png" />
@@ -45,39 +45,6 @@
 			<a onclick="mute()" class="mute">&#xf026;</a>
 		</div>
 	</section>
-	<style>
-		video.bg {
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			min-width: 100%;
-			min-height: 100%;
-			width: auto;
-			height: auto;
-			z-index: -100;
-			-webkit-transform: translateX(-50%) translateY(-50%);
-			transform: translateX(-50%) translateY(-50%);
-			background-size: cover;
-		}
-		.mute, .play {
-			font-family: FontAwesome;
-			text-decoration: none;
-			padding: .5rem;
-		}
-		.controls {
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			user-select: none;
-			cursor: pointer;
-			position: fixed;
-			bottom: 0;
-			right: 0;
-			background-color: #F00;/*$background;*/
-			padding: 1rem;
-			border-radius: 5px; /*$radius*/
-		}
-	</style>
 	<script>
 	var myVideo = document.getElementById("bg-vid");
 
