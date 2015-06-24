@@ -30,10 +30,52 @@
 				</text>
 			</g>
 		</svg>
+
+		<video autoplay loop muted id="vid">
+			<source src="hello.mp4" type="video/mp4" />
+			<source src="hello.ogg" type="video/ogg" />
+		</video>
+
+
 		<h1>404.</h1>
-		<p>I couldn't find the page you're looking for</p>
+		<p>It's not me you're looking for</p>
 		<p>try going back to the <a href="http://haroen.me">homepage</a></p>
 		<a href="http://haroen.me" class="button">give up</a>
+		<a onclick="playPause()" class="play">pause</a>
+		<a onclick="mute()" class="mute">mute</a>
 	</section>
+	<style>
+		#vid {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -100;
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+			background-size: cover;
+		}
+		.mute {
+			background: url(mute.svg);
+		}
+	</style>
+	<script>
+	var myVideo = document.getElementById("vid");
+
+	function playPause() {
+	    if (myVideo.paused) {
+	        myVideo.play();
+	    }
+	    else {
+	        myVideo.pause();
+	    }
+	}
+	function mute() {
+		myVideo.muted = !myVideo.muted;
+	}
+	</script>
 </body>
 </html>
