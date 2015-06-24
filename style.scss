@@ -29,6 +29,7 @@ html {
 }
 
 body {
+  margin: 0;
   color: $foreground;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
@@ -281,20 +282,51 @@ meter {
   transform: scale(1) rotate(0deg);
   transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
 
-  path {
-    fill: $foreground;
-  }
+  path { fill: $foreground; }
 
-  .mark {
-    fill: $foreground;
-  }
+  .mark { fill: $foreground; }
 
-  .mark:hover {
-    fill: $alternate;
-  }
+  .mark:hover { fill: $alternate; }
 
   &:hover {
     -webkit-transform: scale(.9) rotate(3deg);
     transform: scale(.9) rotate(3deg);
   }
+}
+
+video.bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+.mute, .play {
+  font-family: FontAwesome;
+  text-decoration: none;
+  padding: .5rem;
+}
+
+.controls {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: $background;
+  padding: 1rem;
+  border-radius: $radius;
+}
+
+@media screen and (max-width: 675px), (pointer: coarse) {
+  .controls, video.bg { display: none; }
 }
