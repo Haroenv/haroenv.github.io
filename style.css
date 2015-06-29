@@ -12,6 +12,7 @@ html {
   font-weight: normal;
   font-style: normal; }
 body {
+  margin: 0;
   color: #fff;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
@@ -243,5 +244,40 @@ meter {
   .search:hover {
     -webkit-transform: scale(0.9) rotate(3deg);
     transform: scale(0.9) rotate(3deg); }
+
+video.bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover; }
+
+.mute, .play {
+  font-family: FontAwesome;
+  text-decoration: none;
+  padding: .5rem; }
+
+.controls {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #7f1734;
+  padding: 1rem;
+  border-radius: 0.36rem; }
+
+@media screen and (max-width: 675px), (pointer: coarse) {
+  .controls, video.bg {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
