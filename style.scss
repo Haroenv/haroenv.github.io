@@ -8,6 +8,7 @@ $normal: 2rem;
 $large: 4rem;
 $huge: 6rem;
 
+$transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
 
 // General stying
 
@@ -94,7 +95,7 @@ h1, h2.main {
   font-size: $normal;
   padding: 1rem 2rem;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
+  transition: $transition;
   background-clip: border;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -280,7 +281,7 @@ meter {
 .search {
   -webkit-transform: scale(1) rotate(0deg);
   transform: scale(1) rotate(0deg);
-  transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
+  transition: $transition;
 
   path { fill: $foreground; }
 
