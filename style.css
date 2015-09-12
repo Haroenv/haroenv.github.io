@@ -131,6 +131,9 @@ p#generated {
 .file::before {
   content: "\f15b"; }
 
+.bicycle::before {
+  content: "\f206"; }
+
 li.marks {
   display: inline-block;
   margin: 1rem;
