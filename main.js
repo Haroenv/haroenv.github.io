@@ -1,4 +1,7 @@
-//random generator
+(function() {
+"use strict";
+
+/* random description generator */
 var descriptions = [
   "student",
   "git lover",
@@ -14,6 +17,7 @@ var descriptions = [
 
 var oldIndex = 0;
 
+//generate a new description
 function generate() {
   var index1 = Math.floor(Math.random() * descriptions.length);
   if (index1 === oldIndex) {
@@ -28,31 +32,90 @@ function generate() {
   oldIndex = index1;
 }
 
-//scrolling
-function animate(from, to, time) {
-  var start = new Date().getTime(),
-    timer = setInterval(function () {
-      var step = Math.min(1, (new Date().getTime() - start) / time);
-      document.body["scrollTop"] = (from + step * (to - from)) + "";
-      if (step === 1) {
-        clearInterval(timer);
+
+document.getElementById("generator").addEventListener("click",function() {
+  generate();
+});
+
+/* scrolling to the next element */
+
+// https://gist.github.com/james2doyle/5694700
+// easing functions http://goo.gl/5HLl8
+Math.easeInOutQuad = function (t, b, c, d) {
+  t /= d/2;
+  if (t < 1) {
+    return c/2*t*t + b
+  }
+  t--;
+  return -c/2 * (t*(t-2) - 1) + b;
+};
+
+// requestAnimationFrame for Smart Animating http://goo.gl/sx5sts
+var requestAnimFrame = (function(){
+  return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
+})();
+
+function scrollTo(to, callback, duration) {
+  // because it's so fucking difficult to detect the scrolling element, just move them all
+  function move(amount) {
+    document.documentElement.scrollTop = amount;
+    document.body.parentNode.scrollTop = amount;
+    document.body.scrollTop = amount;
+  }
+  function position() {
+    return document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop;
+  }
+  var start = position(),
+    change = to - start,
+    currentTime = 0,
+    increment = 20;
+  duration = (typeof(duration) === "undefined") ? 500 : duration;
+  var animateScroll = function() {
+    // increment the time
+    currentTime += increment;
+    // find the value with the quadratic in-out easing function
+    var val = Math.easeInOutQuad(currentTime, start, change, duration);
+    // move the document.body
+    move(val);
+    // do the animation unless its over
+    if (currentTime < duration) {
+      requestAnimFrame(animateScroll);
+    } else {
+      if (callback && typeof(callback) === "function") {
+        // the animation is done so lets callback
+        callback();
       }
-    }, 25);
-  document.body.style["scrollTop"] = from + "";
+    }
+  };
+  animateScroll();
 }
 
-function goTo(from, to) {
-  animate(document.getElementById(from).offsetTop, document.getElementById(to).offsetTop, 500);
-  return false;
+
+//adding the scroll to the arrows
+var addListener = function(i) {
+  i.addEventListener("click",function(e) {
+    scrollTo(document.getElementById(i.href.substr(i.href.indexOf("#")+1)).offsetTop,function() {
+      document.location = i.href;
+    });
+    e.preventDefault();
+  });
+};
+
+// todo: check for classname
+var arrows = document.querySelectorAll(".arrow");
+for (var i = 0; i < arrows.length; i++) {
+  addListener(arrows[i]);
 }
 
-//google analytics
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
-ga.l=+new Date;
-ga('create', 'UA-27277115-3', 'auto');
-ga('send', 'pageview');
+/* google analytics */
+window.ga = window.ga || function() {
+  (ga.q = ga.q||[]).push(arguments);
+};
+ga.l = +new Date;
+ga("create", "UA-27277115-3", "auto");
+ga("send", "pageview");
 
-//konami code
+/* konami code */
 /*
  * Konami-JS ~
  * :: Now with support for touch events and multiple instances for
@@ -96,7 +159,7 @@ var Konami = function (callback) {
       this.iphone.load(link);
     },
     code: function (link) {
-      window.location = link
+      window.location = link;
     },
     iphone: {
       start_x: 0,
@@ -138,10 +201,10 @@ var Konami = function (callback) {
         x = ((this.start_x - this.stop_x) < 0) ? "RIGHT" : "LEFT";
         y = ((this.start_y - this.stop_y) < 0) ? "DOWN" : "UP";
         result = (x_magnitude > y_magnitude) ? x : y;
-        result = (this.tap == true) ? "TAP" : result;
+        result = (this.tap === true) ? "TAP" : result;
 
         if (result == this.keys[0]) this.keys = this.keys.slice(1, this.keys.length);
-        if (this.keys.length == 0) {
+        if (this.keys.length === 0) {
           this.keys = this.orig_keys;
           this.code(link);
         }
@@ -159,17 +222,17 @@ var Konami = function (callback) {
 };
 
 function loadcss(url) {
-  var head = document.getElementsByTagName('head')[0],
-  link = document.createElement('link');
-  link.type = 'text/css';
-  link.rel = 'stylesheet';
+  var head = document.getElementsByTagName("head")[0],
+  link = document.createElement("link");
+  link.rel = "stylesheet";
   link.href = url;
   head.insertBefore(link, head.childNodes[0]);
   return link;
 }
 function cssSwitch() {
-  loadcss('/s/konami.css');
+  loadcss("/s/konami.css");
 }
 
 var easter_egg = new Konami(cssSwitch);
 
+}());

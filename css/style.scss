@@ -49,7 +49,7 @@ a {
 }
 
 code {
-  font-family: Monaco, 'Courier New', monospace;
+  font-family: Monaco, Consolas, 'Courier New', monospace;
 }
 
 ul {
@@ -57,30 +57,29 @@ ul {
 }
 
 .fullpage {
-  height: 90vh;
-  padding-top: 10vh;
-  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  @media screen and (min-height: 600px) and (min-width: 600px) {
+    min-height: 100vh;
+  }
 
-  // on mobile, the header is too high, and the arrow wouldn't fit
-  @media screen and (max-height: 600px) , (max-width: 470px) {
-      height: 100%;
-      padding-bottom: 6vh;
-      padding-top: 0;
+  .content {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
 .long-arrow-down::before { content: '\f175'; }
 
 .arrow {
-  bottom: 2vh;
   font-size: 2em;
-  position: absolute;
-
-  @media screen and (min-height: 600px) {
-    bottom: 4vh;
-  }
-
-  @media screen and (max-height: 540px) {
+  margin-bottom: 2vh;
+  @media screen and (max-height: 600px) {
     display: none;
   }
 }
@@ -99,7 +98,7 @@ h1, h2.main {
   padding: 1rem 2rem;
   text-decoration: none;
   transition: $transition;
-  background-clip: border;
+
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
