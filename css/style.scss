@@ -15,6 +15,12 @@ $transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
 
 // General stying
 
+%flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 html {
   font-size: 62.5%;
   background-color: $background;
@@ -37,7 +43,6 @@ body {
   color: $foreground;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
-  // text-align: center;
 }
 
 a {
@@ -57,15 +62,7 @@ ul {
 }
 
 .fullpage {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  @extend %flex-center-column;
   @media screen and (min-height: 600px) and (min-width: 600px) {
     min-height: 100vh;
   }
@@ -74,6 +71,7 @@ ul {
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    @extend %flex-center-column;
   }
 }
 
@@ -131,20 +129,25 @@ p#generated {
 
 // Social icons
 
-.social ul {
-  padding: 3rem;
-  padding-top: 1rem;
+.social {
+  h2 {
+    text-align: center;
+  }
+  ul {
+    padding: 3rem;
+    padding-top: 1rem;
 
-  li {
-    display: inline-block;
-    font-size: $small;
-    text-transform: uppercase;
-    margin: .5rem 0;
+    li {
+      display: inline-block;
+      font-size: $small;
+      text-transform: uppercase;
+      margin: .5rem 0;
 
-    a {
-      text-decoration: none;
-      margin: 1rem;
-      padding: .5rem;
+      a {
+        text-decoration: none;
+        margin: 1rem;
+        padding: .5rem;
+      }
     }
   }
 }
@@ -190,12 +193,20 @@ li.marks {
   }
 }
 
+.competencies {
+  display: flex;
+}
+
 .competencies li {
   list-style-type: none;
 }
 
 .marks ul {
   padding-left: 0;
+}
+
+.items {
+  @extend %flex-center-column;
 }
 
 .items p {
