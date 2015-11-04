@@ -37,7 +37,7 @@ body {
   color: $foreground;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
-  text-align: center;
+  // text-align: center;
 }
 
 a {
@@ -63,6 +63,9 @@ ul {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   @media screen and (min-height: 600px) and (min-width: 600px) {
     min-height: 100vh;
   }
