@@ -136,6 +136,7 @@ p#generated {
   ul {
     padding: 3rem;
     padding-top: 1rem;
+    text-align: center;
 
     li {
       display: inline-block;
@@ -177,14 +178,13 @@ p#generated {
 // competencies
 
 li.marks {
-  display: inline-block;
   margin: 1rem;
   vertical-align: text-top;
 }
 
 @media screen and (max-width: 470px) {
-  li.marks {
-    display: inline;
+  .competencies {
+    flex-direction: column;
   }
   #competencies .arrow,
   #education .arrow {
@@ -195,6 +195,7 @@ li.marks {
 
 .competencies {
   display: flex;
+  flex-direction: row;
 }
 
 .competencies li {
@@ -220,6 +221,7 @@ h3.competencies {
   font-size: $normal;
   margin: 1.5rem 0;
   text-transform: uppercase;
+  text-align: center;
 }
 
 // value bars
@@ -229,7 +231,6 @@ $padding: 1px;
 $radius: 0.3*$height;
 
 // html5 meter
-
 meter {
   width: $width;
   height: $height;
@@ -293,6 +294,12 @@ meter {
 .list li {
   list-style-type: none;
   margin-top: 1rem;
+}
+
+.list {
+  @media all and (max-width: 600px) {
+    text-align: center;
+  }
 }
 
 // 404 things
