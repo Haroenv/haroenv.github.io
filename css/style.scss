@@ -16,9 +16,15 @@ $transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
 // General stying
 
 %flex-center-column {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 html {
@@ -121,10 +127,11 @@ h1, h2.main {
 p#generated {
   font-size: $huge;
   word-wrap: break-word;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
   -webkit-hyphens: auto;
-  hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  text-align: center;
 }
 
 // Social icons
@@ -182,20 +189,26 @@ li.marks {
   vertical-align: text-top;
 }
 
+ul.competencies {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 @media screen and (max-width: 470px) {
-  .competencies {
-    flex-direction: column;
+  ul.competencies {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #competencies .arrow,
   #education .arrow {
     display: none;
     visibility: hidden;
   }
-}
-
-.competencies {
-  display: flex;
-  flex-direction: row;
 }
 
 .competencies li {
