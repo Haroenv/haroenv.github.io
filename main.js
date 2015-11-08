@@ -101,8 +101,7 @@ var addListener = function(i) {
   });
 };
 
-// todo: check for classname
-var arrows = document.querySelectorAll(".arrow");
+var arrows = document.getElementsByClassName("arrow");
 for (var i = 0; i < arrows.length; i++) {
   addListener(arrows[i]);
 }
