@@ -49,12 +49,7 @@
 	'use strict';
 	var myVideo = document.getElementById("bg-vid");
 	function playPause() {
-	    if (myVideo.paused) {
-	        myVideo.play();
-	    }
-	    else {
-	        myVideo.pause();
-	    }
+	    myVideo.paused ? myVideo.play() : myVideo.pause();
 	}
 	function mute() {
 		myVideo.muted = !myVideo.muted;
