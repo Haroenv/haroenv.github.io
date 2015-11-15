@@ -90,7 +90,6 @@ function scrollTo(to, callback, duration) {
   animateScroll();
 }
 
-
 //adding the scroll to the arrows
 var addListener = function(i) {
   i.addEventListener("click",function(e) {
@@ -220,18 +219,13 @@ var Konami = function (callback) {
   return konami;
 };
 
-function loadcss(url) {
+var easter_egg = new Konami(function() {
   var head = document.getElementsByTagName("head")[0],
   link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = url;
+  link.href = "/s/konami.css";
   head.insertBefore(link, head.childNodes[0]);
   return link;
-}
-function cssSwitch() {
-  loadcss("/s/konami.css");
-}
-
-var easter_egg = new Konami(cssSwitch);
+});
 
 }());
