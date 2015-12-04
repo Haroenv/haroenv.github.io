@@ -90,6 +90,10 @@ ul {
 .arrow {
   font-size: 2em;
   margin-bottom: 2vh;
+  text-decoration: none;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   @media screen and (max-height: 600px) {
     display: none;
   }
@@ -103,7 +107,7 @@ h1, h2.main {
 
 .button {
   background: $foreground;
-  border-radius: 5px;
+  border-radius: .2em;
   color: $background;
   font-size: $normal;
   padding: 1rem 2rem;
