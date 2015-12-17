@@ -20,11 +20,11 @@ $transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 html {
@@ -79,10 +79,16 @@ ul {
 
   .content {
     -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    -ms-flex: 1;
+    flex: 1;
     @extend %flex-center-column;
   }
+}
+
+.error {
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .long-arrow-down::before { content: '\f175'; }
@@ -92,8 +98,8 @@ ul {
   margin-bottom: 2vh;
   text-decoration: none;
   -webkit-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -ms-flex: 0;
+  flex: 0;
   @media screen and (max-height: 600px) {
     display: none;
   }
@@ -136,9 +142,9 @@ p#generated {
   font-size: $huge;
   word-wrap: break-word;
   -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   text-align: center;
 }
 
@@ -202,15 +208,15 @@ ul.competencies {
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 470px) {
   ul.competencies {
     -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   #competencies .arrow,
   #education .arrow {
