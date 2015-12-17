@@ -19,7 +19,12 @@
 	<meta name="theme-color" content="#7f1734" />
 </head>
 <body>
-	<section class="fullpage">
+	<video autoplay loop muted class="bg" poster="/404/poster.png" id="bg-vid">
+		<source src="/404/hello.ogg" type="video/ogg" />
+		<source src="/404/hello.mp4" type="video/mp4" />
+	</video>
+	<section class="fullpage error">
+	<!--
 		<svg class="search" xmlns="http://www.w3.org/2000/svg" width="254" height="254" viewBox="-10 -10 264 264" version="1.1">
 			<g>
 				<path d="M150.3 168C134.7 179.9 115.2 187 94 187 42.6 187 1 145.4 1 94 1 42.6 42.6 1 94 1 145.4 1 187 42.6 187 94 187 115.2 179.9 134.7 168 150.3L252.4 234.7 234.7 252.4 150.3 168ZM94 168C134.9 168 168 134.9 168 94 168 53.1 134.9 20 94 20 53.1 20 20 53.1 20 94 20 134.9 53.1 168 94 168Z" />
@@ -30,26 +35,23 @@
 				</text>
 			</g>
 		</svg>
+	-->
 
-		<video autoplay loop muted class="bg" poster="/404/poster.png" id="bg-vid">
-			<source src="/404/hello.ogg" type="video/ogg" />
-			<source src="/404/hello.mp4" type="video/mp4" />
-		</video>
+	<h1>404.</h1>
+	<p>It's not me you're looking for</p>
+	<p>try going back to the <a href="https://haroen.me">homepage</a></p>
+	<a href="https://haroen.me" class="button">give up</a>
 
-		<h1>404.</h1>
-		<p>It's not me you're looking for</p>
-		<p>try going back to the <a href="https://haroen.me">homepage</a></p>
-		<a href="https://haroen.me" class="button">give up</a>
-		<div class="controls">
-			<a onclick="playPause()" class="play">&#xf04b;</a>
-			<a onclick="mute()" class="mute">&#xf026;</a>
-		</div>
-	</section>
-	<script>
+</section>
+<div class="controls">
+	<a onclick="playPause()" class="play">&#xf04b;</a>
+	<a onclick="mute()" class="mute">&#xf026;</a>
+</div>
+<script>
 	'use strict';
 	var myVideo = document.getElementById("bg-vid");
 	function playPause() {
-	    myVideo.paused ? myVideo.play() : myVideo.pause();
+		myVideo.paused ? myVideo.play() : myVideo.pause();
 	}
 	function mute() {
 		myVideo.muted = !myVideo.muted;
@@ -58,7 +60,7 @@
 	ga.l=+new Date;
 	ga('create', 'UA-27277115-3', 'auto');
 	ga('send', 'pageview');
-	</script>
-	<script async src="https://www.google-analytics.com/analytics.js"></script>
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
 </body>
 </html>
