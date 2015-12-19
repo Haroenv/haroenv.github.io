@@ -20,8 +20,9 @@
 </head>
 <body>
 	<video autoplay loop muted class="bg" poster="/404/poster.png" id="bg-vid">
-		<source src="/404/hello.ogg" type="video/ogg" />
-		<source src="/404/hello.mp4" type="video/mp4" />
+		<source src="/404/domino.mp4" type="video/mp4" />
+		<!-- <source src="/404/hello.ogg" type="video/ogg" /> -->
+		<!-- <source src="/404/hello.mp4" type="video/mp4" /> -->
 	</video>
 	<section class="fullpage error">
 	<!--
@@ -38,23 +39,35 @@
 	-->
 
 	<h1>404.</h1>
-	<p>It's not me you're looking for</p>
+	<p>I'm stumbling, what page do you want to go to?</p>
 	<p>try going back to the <a href="https://haroen.me">homepage</a></p>
 	<a href="https://haroen.me" class="button">give up</a>
 
 </section>
 <div class="controls">
-	<a onclick="playPause()" class="play">&#xf04b;</a>
-	<a onclick="mute()" class="mute">&#xf026;</a>
+	<a onclick="playPause()" class="play" id="play">&#xf04c;</a>
+	<a onclick="mute()" class="mute" id="mute">&#xf026;</a>
 </div>
 <script>
 	'use strict';
 	var myVideo = document.getElementById("bg-vid");
 	function playPause() {
-		myVideo.paused ? myVideo.play() : myVideo.pause();
+		if (myVideo.paused) {
+			myVideo.play();
+			document.getElementById('play').innerHTML = '&#xf04c;';
+		} else {
+			myVideo.pause();
+			document.getElementById('play').innerHTML = '&#xf04b;';
+		}
 	}
 	function mute() {
-		myVideo.muted = !myVideo.muted;
+		if (myVideo.muted) {
+			myVideo.muted = false;
+			document.getElementById('mute').innerHTML = '&#xf028;';
+		} else {
+			myVideo.muted = true;
+			document.getElementById('mute').innerHTML = '&#xf026;';
+		}
 	}
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
 	ga.l=+new Date;
