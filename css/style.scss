@@ -219,7 +219,8 @@ ul.competencies {
     flex-direction: column;
   }
   #competencies .arrow,
-  #education .arrow {
+  #education .arrow,
+  #pages .arrow, {
     display: none;
     visibility: hidden;
   }
