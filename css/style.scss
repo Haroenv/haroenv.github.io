@@ -91,8 +91,6 @@ ul {
   justify-content: center;
 }
 
-.long-arrow-down::before { content: '\f175'; }
-
 .arrow {
   font-size: 2em;
   margin-bottom: 2vh;
@@ -103,6 +101,8 @@ ul {
   @media screen and (max-height: 600px) {
     display: none;
   }
+
+  &::before { content: '\f175'; }
 }
 
 h1, h2.main {
