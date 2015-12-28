@@ -67,7 +67,7 @@
 	<!-- intro/main -->
 	<section class="fullpage" id="main">
 		<div class="content">
-		<h1>Haroen Viaene</h1>
+			<h1>Haroen Viaene</h1>
 			<a class="button" id="generator">is a</a>
 			<p id="generated">student</p>
 			<div class="social" id="social">
@@ -188,6 +188,23 @@
 						</li>
 					</ul>
 				</li>
+			</ul>
+			<p>But this doesn't say a lot. Below is what I've done on github pages.</p>
+		</div>
+		<a href="#pages" class="icons arrow long-arrow-down" title="go to github pages"></a>
+	</section>
+	<!-- github pages -->
+	<section class="fullpage" id="pages">
+		<div class="content">
+			<h2 class="main">Github pages</h2>
+			<ul>
+				{% for repo in site.github.public_repositories %}
+				{% unless repo.fork %}
+				{% if repo.has_pages %}
+				<li><a href="https://haroen.me/{{ repo.name }}">haroen.me/{{ repo.name }}</a></li>
+				{% endif %}
+				{% endunless %}
+				{% endfor %}
 			</ul>
 		</div>
 		<a href="#education" class="icons arrow long-arrow-down" title="go to education"></a>
