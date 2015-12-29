@@ -203,9 +203,9 @@
 			<ul class="list">
 				{% for repo in site.github.public_repositories %}
 				{% unless repo.fork %}
-				{% if repo.has_pages %}
-				<li><a href="https://haroen.me/{{ repo.name }}">haroen.me/{{ repo.name }}</a></li>
-				{% endif %}
+				{% if repo.homepage %}
+		    <a href="{{repo.homepage}}">{{ repo.name }}</a>
+		    {% endif %}
 				{% endunless %}
 				{% endfor %}
 			</ul>
