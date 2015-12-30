@@ -330,6 +330,14 @@ meter {
   }
 }
 
+// tri-list
+@media all and (min-width: 430px) {
+  #pages .list {
+    column-count: 3;
+  }
+}
+
+
 // 404 things
 
 .search {

@@ -1,2 +1,5 @@
 sass:
-    style: compressed
+  style: compressed
+gems:
+  - 'jekyll-github-metadata'
+repository: haroenv/haroenv.github.io
