@@ -207,7 +207,7 @@
 				{% for repo in site.github.public_repositories %}
 				{% unless repo.fork %}
 				{% if repo.homepage %}
-				<li><a href="{{repo.homepage}}">{{ repo.name }}</a></li>
+				<li><a href="{{repo.homepage}}" title="{{repo.description}}">{{ repo.name }}</a></li>
 				{% endif %}
 				{% endunless %}
 				{% endfor %}
