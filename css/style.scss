@@ -286,6 +286,8 @@ meter {
 
 // fallback
 // the background part
+// deprecated
+/*
 .level {
   margin: 0 auto;
   z-index: 0;
@@ -315,7 +317,7 @@ meter {
     width: $width*$i/10;
   }
 }
-
+*/
 .list li {
   list-style-type: none;
   margin-top: 1rem;
