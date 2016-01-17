@@ -37,6 +37,15 @@ document.getElementById("generator").addEventListener("click",function() {
   generate();
 });
 
+/* making fallback for meter element work */
+var meters = document.getElementsByTagName('meter');
+for (var i = 0; i < meters.length; i++) {
+  if (meters[i].clientHeight === 0) {
+    meters[i].style.border = "none";
+  }
+}
+
+
 /* scrolling to the next element */
 
 // https://gist.github.com/james2doyle/5694700

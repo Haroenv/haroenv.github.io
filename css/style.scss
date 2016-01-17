@@ -108,7 +108,7 @@ h1, h2.main {
 // Button
 
 .button {
-  background: $foreground;
+  background-color: $foreground;
   border-radius: .2em;
   color: $background;
   font-size: $normal;
@@ -123,7 +123,7 @@ h1, h2.main {
   user-select: none;
 
   &:hover {
-    background: none;
+    background-color: none;
     box-shadow: inset 0 0 0 1px $foreground;
     color: $foreground;
     cursor: pointer;
@@ -191,7 +191,7 @@ p#generated {
 .space-shuttle::before { content: "\f197"; }
 .file::before          { content: "\f15b"; }
 .bicycle::before       { content: "\f206"; }
-.rss::before          { content: "\f09e"; }
+.rss::before           { content: "\f09e"; }
 
 // competencies
 
@@ -286,14 +286,12 @@ meter {
 
 // fallback
 // the background part
-// deprecated
-/*
 .level {
   margin: 0 auto;
   z-index: 0;
   width: $width;
   height: $height;
-  background: $foreground;
+  background-color: $foreground;
   border-radius: $radius;
   padding: $padding;
   position: relative;
@@ -303,7 +301,7 @@ meter {
     z-index: 1;
     content: "";
     height: $height;
-    background: $background;
+    background-color: $background;
     border-radius: $radius;
     position: absolute;
     left: $padding;
@@ -317,7 +315,7 @@ meter {
     width: $width*$i/10;
   }
 }
-*/
+
 .list li {
   list-style-type: none;
   margin-top: 1rem;
