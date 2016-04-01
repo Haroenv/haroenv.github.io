@@ -130,23 +130,24 @@ layout: default
 					</ul>
 				</li>
 			</ul>
-			<p>But this doesn't say a lot. Below is what I've done on github pages.</p>
+			<p>But this doesn't say a lot. Below are some examples of live things I did.</p>
 		</div>
 		<a href="#pages" class="icons arrow" title="go to github pages"></a>
 	</section>
 	<!-- github pages -->
 	<section class="fullpage" id="pages">
 		<div class="content">
-			<h2 class="main">Github pages</h2>
+			<h2 class="main">Some examples</h2>
 			<ul class="list">
 				{% for repo in site.github.public_repositories %}
 				{% unless repo.fork %}
-				{% if repo.homepage %}
+				{% if repo.homepage.size > 0 %}
 				<li><a href="{{repo.homepage}}" title="{{repo.description}}">{{ repo.name }}</a></li>
 				{% endif %}
 				{% endunless %}
 				{% endfor %}
 			</ul>
+			<p>and a lot more on <a href="https://github.com/Haroenv">GitHub</a>.</p>
 		</div>
 		<a href="#education" class="icons arrow" title="go to education"></a>
 	</section>
