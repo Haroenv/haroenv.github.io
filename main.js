@@ -114,14 +114,6 @@ for (var i = 0; i < arrows.length; i++) {
   addListener(arrows[i]);
 }
 
-/* google analytics */
-window.ga = window.ga || function() {
-  (ga.q = ga.q||[]).push(arguments);
-};
-ga.l = +new Date;
-ga("create", "UA-27277115-3", "auto");
-ga("send", "pageview");
-
 /* konami code */
 /*
  * Konami-JS ~
