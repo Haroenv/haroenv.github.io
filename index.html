@@ -138,11 +138,13 @@ layout: default
 	<section class="fullpage" id="pages">
 		<div class="content">
 			<h2 class="main">Some examples</h2>
+			<p>updated: {{ site.time }}</p>
 			<ul class="list">
-				{% for repo in site.github.public_repositories %}
+				{% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
+				{% for repo in repos %}
 				{% unless repo.fork %}
 				{% if repo.homepage.size > 0 %}
-				<li><a href="{{repo.homepage}}" title="{{repo.description}}">{{ repo.name }}</a></li>
+				<li><a href="{{repo.homepage}}" title="{{repo.description}}">{{ repo.name }}</a> {{repo.stargazers_count}}⭐️</li>
 				{% endif %}
 				{% endunless %}
 				{% endfor %}
