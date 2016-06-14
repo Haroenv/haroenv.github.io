@@ -100,7 +100,7 @@ function scrollTo(to, callback, duration) {
 }
 
 //adding the scroll to the arrows
-var addListener = function(i) {
+function addListener(i) {
   i.addEventListener("click",function(e) {
     scrollTo(document.getElementById(i.href.substr(i.href.indexOf("#")+1)).offsetTop,function() {
       document.location = i.href;
