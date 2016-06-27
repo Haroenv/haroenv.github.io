@@ -75,9 +75,9 @@ layout: default
 					<h3 class="competencies">Programming</h3>
 					<ul class="items">
 						<li>
-							<p>Java</p>
-							<meter value="0.4" title="4/10">
-								<div class="level level-4" title="4/10"></div>
+							<p>JavaScript</p>
+							<meter value="0.8" title="8/10">
+								<div class="level level-8" title="8/10"></div>
 							</meter>
 						</li>
 						<!-- <li>
@@ -141,15 +141,16 @@ layout: default
 			<p>updated: {{ site.time }}</p>
 			<ul class="list">
 				{% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
-				{% for repo in repos %}
+				{% for repo in repos limit: 15 %}
 				{% unless repo.fork %}
-				{% if repo.homepage.size > 0 %}
-				<li><a href="{{repo.homepage}}" title="{{repo.description}}">{{ repo.name }}</a> {{repo.stargazers_count}}⭐️</li>
-				{% endif %}
+				<li>
+					<a href="{% if repo.homepage.size > 0 %}{{repo.homepage}}{% else %}{{repo.html_url}}{% endif %}" title="{{repo.description}}">{{ repo.name }}</a><a href="{{repo.html_url}}" class="no-underline">{% if repo.stargazers_count > 0 %} {{repo.stargazers_count}}⭐️{% endif %} {{repo.language}}</a>
+				</li>
 				{% endunless %}
 				{% endfor %}
-				<li><a href="http://ikhaat.gent" title="Ik haat Gent!">Ik haat Gent</a></li>
-				<li><a href="https://github.com/jwronline/dashboard" title="shuttle dashboard">dashboard</a></li>
+				<li><a href="http://ikhaat.gent" title="Ik haat Gent!">Ik haat Gent</a><a class="no-underline" href="https://github.com/FCCGhent/Ikhaat"> 4⭐️ CSS</a></a></li>
+				<li><a href="https://github.com/jwronline/dashboard" title="shuttle dashboard">dashboard<a class="no-underline" href="https://github.com/jwronline/dashboard"> 1⭐️ JavaScript</a></li>
+				<li><a href="https://github.com/Haroenv">...</a></li>
 			</ul>
 			<p>and a lot more on <a href="https://github.com/Haroenv">GitHub</a>.</p>
 		</div>
