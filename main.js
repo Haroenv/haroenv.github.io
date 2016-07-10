@@ -224,7 +224,7 @@ var easter_egg = new Konami(function() {
   var head = document.getElementsByTagName("head")[0],
   link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = "/s/konami.css";
+  link.href = "https://s.haroen.me/konami.css";
   head.insertBefore(link, head.childNodes[0]);
   return link;
 });
