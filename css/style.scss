@@ -50,10 +50,6 @@ body {
 a {
   color: $foreground;
 
-  &:hover {
-    color: $alternate;
-  }
-
   &.no-underline {
     text-decoration: none;
   }
@@ -128,14 +124,14 @@ h1, h2.main {
   user-select: none;
 
   &:hover {
-    background-color: none;
-    box-shadow: inset 0 0 0 1px $foreground;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px currentColor;
     color: $foreground;
     cursor: pointer;
   }
 
   &:active {
-    box-shadow: inset 0 0 0 2px $foreground;
+    box-shadow: inset 0 0 0 2px currentColor;
   }
 }
 
