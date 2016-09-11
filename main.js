@@ -100,19 +100,17 @@ function scrollTo(to, callback, duration) {
 }
 
 //adding the scroll to the arrows
-function addListener(i) {
-  i.addEventListener("click",function(e) {
-    scrollTo(document.getElementById(i.href.substr(i.href.indexOf("#")+1)).offsetTop,function() {
-      document.location = i.href;
+function addScrollTo(element) {
+  element.addEventListener("click",function(e) {
+    scrollTo(document.getElementById(element.href.substr(element.href.indexOf("#")+1)).offsetTop,function() {
+      document.location = element.href;
     });
     e.preventDefault();
   });
 };
 
-var arrows = document.getElementsByClassName("arrow");
-for (var i = 0; i < arrows.length; i++) {
-  addListener(arrows[i]);
-}
+
+Array.from(document.getElementsByClassName("arrow")).forEach(addScrollTo);
 
 /* konami code */
 /*
