@@ -12,7 +12,7 @@ var descriptions = [
   "poweruser",
   "meme",
   "Belgian",
-  "<a href='http://bullg.it'>gitch</a>"
+  "<a href='https://bullg.it'>gitch</a>"
 ];
 
 var oldIndex = 0;
