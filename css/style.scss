@@ -25,11 +25,15 @@ $transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 html {
   font-size: 62.5%;
   background-color: $background;
+  line-height: 2;
 }
 
 @font-face {
