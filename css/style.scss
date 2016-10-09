@@ -343,6 +343,9 @@ meter {
     width: 100%;
     height: 100%;
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 148 148'><path fill='none' fill-rule='evenodd' stroke='white' d='M7.587 45.31l30.46-26.81-35.26 109.02L117.318 3 59.955 144s78.677-92.59 78.677-90.527c0 2.063-14.08 82.446-14.08 82.446l20.66-17.562'/></svg>") center no-repeat;
+    @media (max-width: 470px) {
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 305 704'><path fill='none' stroke='white' stroke-width='5' d='M14.8984375,0.57421875 L300.980469,45.8007812 L66.3046875,82.9921875 L247.746094,142.578125 L13.1914062,217.472656 L244.160156,308.066406 L98.8164062,362.691406 L194.816406,414.328125 L22.9726562,448.65625 L244.484375,550.039062 L2.25,609.890625 L174.296875,658.679688 L111.25,703.289062'/></svg>") top repeat-y;
+    }
   }
 }
 
