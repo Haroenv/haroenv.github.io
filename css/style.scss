@@ -332,6 +332,20 @@ meter {
   }
 }
 
+.crossed {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 148 148'><path fill='none' fill-rule='evenodd' stroke='white' d='M7.587 45.31l30.46-26.81-35.26 109.02L117.318 3 59.955 144s78.677-92.59 78.677-90.527c0 2.063-14.08 82.446-14.08 82.446l20.66-17.562'/></svg>") center no-repeat;
+  }
+}
+
 // tri-list
 @media all and (min-width: 430px) {
   #pages .list {
