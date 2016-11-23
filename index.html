@@ -144,7 +144,7 @@ layout: default
 	<section class="fullpage" id="pages">
 		<div class="content">
 			<h2 class="main">Some examples</h2>
-			<p>updated: {{ site.time }}</p>
+			<p>updated: <time datetime="{{site.time | date_to_xmlschema}}">{{site.time | date_to_string}}</time></p>
 			<ul class="list">
 				{% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
 				{% for repo in repos limit: 15 %}
@@ -186,20 +186,24 @@ layout: default
 				<li><a href="mailto:%22Haroen%20Viaene%22%20%3chello@haroen.me%3e?subject=Job%20offering" title="send a mail to hello@haroen.me">Your job here?</a></li>
 			</ul>
 		</div>
-		<a href="#meetme" class="icons arrow" title="meet me"></a>
+		{% if site.data.meetups %}<a href="#meetme" class="icons arrow" title="meet me"></a>{% endif %}
 	</section>
 	<!-- meet me -->
+	{% if site.data.meetups %}
 	<section class="fullpage" id="meetme">
 		<div class="content">
 			<h2 class="main">Meet me</h2>
 			<ul class="list">
-				<li><a href="https://events.withgoogle.com/firebase-dev-summit/">Firebase Dev Summit</a>: <time datetime="2016-11-07">7/11/2016</time> &ndash; Berlin</li>
-				<li>Algolia community event: <time datetime="2016-11-16">16/11/2016</time> &ndash; Paris</li>
+				{% assign current = site.time | date: "%s" %}
+				{% for meetup in site.data.meetups %}
+				{% assign date = meetup.date | date: "%s" %}
+				<li {% if date < current %}style="opacity: 0.8"{% endif %}>{% if meetup.url %}<a href="{{meetup.url}}">{% endif %}{{meetup.name}}{% if meetup.url %}</a>{% endif %}: <time datetime="{{meetup.date | date_to_xmlschema}}">{{meetup.date | date_to_string}}</time> &ndash; {{meetup.location}}</li>
+				{% endfor %}
 				<li><a href="https://twitter.com/intent/tweet?text=hey @haroenv, meet me at this awesome event!&related=haroenv,bullgit&original_referer=https://haroen.me/#meetme">Let me know about more</a></li>
 			</ul>
 		</div>
 	</section>
-
+	{% endif %}
 	<script src="main.js"></script>
 </body>
 </html>
