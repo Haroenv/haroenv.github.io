@@ -1,0 +1,11 @@
+- name: View Source
+  url: https://viewsourceconf.org/berlin-2016/
+  date: 2016-09-13
+  location: Berlin
+- name: Firebase Dev Summit
+  url: https://events.withgoogle.com/firebase-dev-summit/
+  date: 2016-11-07
+  location: Berlin
+- name: Algolia community event
+  date: 2016-11-16
+  location: Paris
