@@ -9,3 +9,7 @@
 - name: Algolia community event
   date: 2016-11-16
   location: Paris
+- name: Git Merge
+  url: http://git-merge.com
+  date: 2017-02-03
+  location: Brussels
