@@ -1,0 +1,9 @@
+<h2 class="main">Meet me</h2>
+<ul class="list">
+  {% assign current = site.time | date: "%s" %}
+  {% for meetup in site.data.meetups %}
+  {% assign date = meetup.date | date: "%s" %}
+  <li {% if date < current %}style="opacity: 0.8"{% endif %}>{% if meetup.url %}<a href="{{meetup.url}}">{% endif %}{{meetup.name}}{% if meetup.url %}</a>{% endif %}: <time datetime="{{meetup.date | date_to_xmlschema}}">{{meetup.date | date_to_string}}</time> &ndash; {{meetup.location}}</li>
+  {% endfor %}
+  <li><a href="https://twitter.com/intent/tweet?text=hey @haroenv, meet me at this awesome event!&related=haroenv,bullgit&original_referer=https://haroen.me/#meetme">Let me know about more</a></li>
+</ul>

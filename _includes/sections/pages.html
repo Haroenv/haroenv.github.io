@@ -1,0 +1,16 @@
+<h2 class="main">Some examples</h2>
+<p>updated: <time datetime="{{site.time | date_to_xmlschema}}">{{site.time | date_to_string}}</time></p>
+<ul class="list">
+  {% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
+  {% for repo in repos limit: 15 %}
+  {% unless repo.fork %}
+  <li>
+    <a href="{% if repo.homepage.size > 0 %}{{repo.homepage}}{% else %}{{repo.html_url}}{% endif %}" title="{{repo.description}}">{{ repo.name }}</a><a href="{{repo.html_url}}" class="no-underline">{% if repo.stargazers_count > 0 %} {{repo.stargazers_count}}⭐️{% endif %} {{repo.language}}</a>
+  </li>
+  {% endunless %}
+  {% endfor %}
+  <li><a href="http://ikhaat.gent" title="Ik haat Gent!">Ik haat Gent</a><a class="no-underline" href="https://github.com/FCCGhent/Ikhaat"> 4⭐️ CSS</a></a></li>
+  <li><a href="https://github.com/jwronline/dashboard" title="shuttle dashboard">dashboard<a class="no-underline" href="https://github.com/jwronline/dashboard"> 1⭐️ JavaScript</a></li>
+  <li><a href="https://github.com/Haroenv">...</a></li>
+</ul>
+<p>and a lot more on <a href="https://github.com/Haroenv">GitHub</a>.</p>

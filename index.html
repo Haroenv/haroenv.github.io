@@ -4,204 +4,33 @@ layout: default
 <body>
 	<!-- intro/main -->
 	<section class="fullpage" id="main">
-		<div class="content">
-			<h1>Haroen Viaene</h1>
-			<a class="button" id="generator">is a</a>
-			<p id="generated">student</p>
-			<div class="social" id="social">
-				<h2>Contact me:</h2>
-				<ul>
-					<li>
-						<a class="icons github" href="https://github.com/haroenv" title="github.com/haroenv">Github</a>
-					</li>
-					<li>
-						<a class="icons codepen" href="http://codepen.io/Haroenv/" title="codepen.io/Haroenv">Codepen</a>
-					</li>
-					<li>
-						<a class="icons twitter" href="https://twitter.com/haroenv" title="twitter.com/haroenv">Twitter</a>
-					</li>
-					<li>
-						<a class="icons instagram" href="https://instagram.com/haroenv/" title="instagram.com/haroenv">Instagram</a>
-					</li>
-					<li>
-						<a class="icons envelope" href="mailto:%22Haroen%20Viaene%22%20%3chello@haroen.me%3e" title="hello@haroen.me">email</a>
-					</li>
-					<!--<li>
-						<a class="icons space-shuttle" href="http://jwronline.be" title="JWR - Jeugdwerkgroep Ruimtevaart 🇧🇪">Youth Club</a>
-					</li>-->
-					<li>
-						<a class="icons file" href="cv" title="curriculum vitae 🇧🇪🇳🇱/🇫🇷/🇬🇧🇺🇸">cv</a>
-					</li>
-					<li>
-						<a class="icons rss" href="https://blog.haroen.me/" title="my blog 🇬🇧🇺🇸">blog</a>
-					</li>
-					<!-- <li>
-						<a class="icons bicycle" href="trip" title="2015 bike trip through belgium 🇬🇧🇺🇸">bike trip</a>
-					</li> -->
-				</ul>
-			</div>
-		</div>
+		<div class="content">{% include sections/intro.html %}</div>
 		<a href="#competencies" class="icons arrow" title="go to competencies"></a>
 	</section>
 	<!-- competencies -->
 	<section class="fullpage" id="competencies">
-		<div class="content">
-			<h2 class="main">Competencies</h2>
-			<ul class="competencies crossed">
-				<li class="marks">
-					<h3 class="competencies">Languages</h3>
-					<ul class="items">
-						<li>
-							<p>Dutch: C2</p>
-							<meter value="1" title="CEFR C2">
-								<div class="level level-10" title="CEFR C2"></div>
-							</meter>
-						</li>
-						<li>
-							<p>English: C1</p>
-							<meter value="0.8" title="CEFR C1">
-								<div class="level level-8" title="CEFR C1"></div>
-							</meter>
-						</li>
-						<li>
-							<p>French: B2</p>
-							<meter value="0.6" title="CEFR B2">
-								<div class="level level-6" title="CEFR B2"></div>
-							</meter>
-						</li>
-						<li>
-							<p>German: A2</p>
-							<meter value="0.4" title="CEFR A2">
-								<div class="level level-4" title="CEFR A2"></div>
-							</meter>
-						</li>
-					</ul>
-				</li>
-				<li class="marks">
-					<h3 class="competencies">Programming</h3>
-					<ul class="items">
-						<li>
-							<p>JavaScript</p>
-							<meter value="0.8" title="8/10">
-								<div class="level level-8" title="8/10"></div>
-							</meter>
-						</li>
-						<li>
-							<p>HTML/(S)CSS</p>
-							<meter value="0.8" title="8/10">
-								<div class="level level-8" title="8/10"></div>
-							</meter>
-						</li>
-						<li>
-							<p>C#/Java</p>
-							<meter value="0.6" title="6/10">
-								<div class="level level-6" title="6/10"></div>
-							</meter>
-						</li>
-						<li>
-							<p>Bash</p>
-							<meter value="0.6" title="6/10">
-								<div class="level level-6" title="6/10"></div>
-							</meter>
-						</li>
-						<li>
-							<p>LaTeX</p>
-							<meter value="0.6" title="6/10">
-								<div class="level level-6" title="6/10"></div>
-							</meter>
-						</li>
-					</ul>
-				</li>
-				<li class="marks">
-					<h3 class="competencies">Skills</h3>
-					<ul class="items">
-						<li>
-							<p>Photoshop</p>
-							<meter value="0.6" title="6/10">
-								<div class="level level-6" title="6/10"></div>
-							</meter>
-						</li>
-						<li>
-							<p>OS X</p>
-							<meter value="0.8" title="8/10">
-								<div class="level level-8" title="8/10"></div>
-							</meter>
-						</li>
-						<li>
-							<p>Linux</p>
-							<meter value="0.7" title="7/10">
-								<div class="level level-7" title="7/10"></div>
-							</meter>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<p>But rating yourself isn't really that useful or right. Below are some examples of live things I did.</p>
-		</div>
+		<div class="content">{% include sections/competencies.html %}</div>
 		<a href="#pages" class="icons arrow" title="go to github pages"></a>
 	</section>
 	<!-- github pages -->
 	<section class="fullpage" id="pages">
-		<div class="content">
-			<h2 class="main">Some examples</h2>
-			<p>updated: <time datetime="{{site.time | date_to_xmlschema}}">{{site.time | date_to_string}}</time></p>
-			<ul class="list">
-				{% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
-				{% for repo in repos limit: 15 %}
-				{% unless repo.fork %}
-				<li>
-					<a href="{% if repo.homepage.size > 0 %}{{repo.homepage}}{% else %}{{repo.html_url}}{% endif %}" title="{{repo.description}}">{{ repo.name }}</a><a href="{{repo.html_url}}" class="no-underline">{% if repo.stargazers_count > 0 %} {{repo.stargazers_count}}⭐️{% endif %} {{repo.language}}</a>
-				</li>
-				{% endunless %}
-				{% endfor %}
-				<li><a href="http://ikhaat.gent" title="Ik haat Gent!">Ik haat Gent</a><a class="no-underline" href="https://github.com/FCCGhent/Ikhaat"> 4⭐️ CSS</a></a></li>
-				<li><a href="https://github.com/jwronline/dashboard" title="shuttle dashboard">dashboard<a class="no-underline" href="https://github.com/jwronline/dashboard"> 1⭐️ JavaScript</a></li>
-				<li><a href="https://github.com/Haroenv">...</a></li>
-			</ul>
-			<p>and a lot more on <a href="https://github.com/Haroenv">GitHub</a>.</p>
-		</div>
+		<div class="content">{% include sections/pages.html %}</div>
 		<a href="#education" class="icons arrow" title="go to education"></a>
 	</section>
 	<!-- education -->
 	<section class="fullpage" id="education">
-		<div class="content">
-			<h2 class="main">Education</h2>
-			<ul class="list">
-				<li>professional bachelor <a href="https://www.odisee.be/nl/elektronica-ict" title="Odisee curriculum">electronics-information technology</a> (in progress)</li>
-				<li>animator for a <a href="http://www.vlaanderen.be/nl/cultuur-sport-en-vrije-tijd/jeugd/attesten-voor-jeugdwerkers" title="certification of the Flemish Government 🇧🇪🇳🇱">youth club</a></li>
-				<li>extracurricular secondary education animated films at <a href="http://academiebruggedko.be/middelbare-graad/animatiefilm/">Stedelijke Academie Brugge</a></li>
-				<li>secondary education sciences-maths at <a href="http://humaniora.sask.be">SASK</a></li>
-			</ul>
-		</div>
+		<div class="content">{% include sections/education.html %}</div>
 		<a href="#jobs" class="icons arrow" title="go to jobs"></a>
 	</section>
 	<!-- jobs -->
 	<section class="fullpage" id="jobs">
-		<div class="content">
-			<h2 class="main">Jobs</h2>
-			<ul class="list">
-				<li><a href="http://www.jwronline.be" title="Jeugdwerkgroep Ruimtevaart v.z.w.">JWR</a> &mdash; animator, administration, tutor &mdash; 2007 &ndash; 2016</li>
-				<li><a href="http://www.eurospacecenter.be" title="Euro Space Center">Euro Space Center</a> &mdash; animator, tours &mdash; summers 2013 &ndash; 2015</li>
-				<li><a href="http://2016.summerofcode.be">open Summer of code</a> &mdash; front- and backend developer (linked data) &mdash; summer 2016</li>
-				<li><a href="mailto:%22Haroen%20Viaene%22%20%3chello@haroen.me%3e?subject=Job%20offering" title="send a mail to hello@haroen.me">Your job here?</a></li>
-			</ul>
-		</div>
+		<div class="content">{% include sections/jobs.html %}</div>
 		{% if site.data.meetups %}<a href="#meetme" class="icons arrow" title="meet me"></a>{% endif %}
 	</section>
 	<!-- meet me -->
 	{% if site.data.meetups %}
 	<section class="fullpage" id="meetme">
-		<div class="content">
-			<h2 class="main">Meet me</h2>
-			<ul class="list">
-				{% assign current = site.time | date: "%s" %}
-				{% for meetup in site.data.meetups %}
-				{% assign date = meetup.date | date: "%s" %}
-				<li {% if date < current %}style="opacity: 0.8"{% endif %}>{% if meetup.url %}<a href="{{meetup.url}}">{% endif %}{{meetup.name}}{% if meetup.url %}</a>{% endif %}: <time datetime="{{meetup.date | date_to_xmlschema}}">{{meetup.date | date_to_string}}</time> &ndash; {{meetup.location}}</li>
-				{% endfor %}
-				<li><a href="https://twitter.com/intent/tweet?text=hey @haroenv, meet me at this awesome event!&related=haroenv,bullgit&original_referer=https://haroen.me/#meetme">Let me know about more</a></li>
-			</ul>
-		</div>
+		<div class="content">{% include sections/meetme.html %}</div>
 	</section>
 	{% endif %}
 	<script src="main.js"></script>
