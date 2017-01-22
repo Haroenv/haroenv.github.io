@@ -11,6 +11,9 @@ $normal: 2rem;
 $large: 4rem;
 $huge: 6rem;
 
+$radius: 0.3em;
+
+
 $transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
 
 // General stying
@@ -193,7 +196,6 @@ p#generated {
 .twitter::before       { content: "\f099"; }
 .instagram::before     { content: "\f16d"; }
 .envelope::before      { content: "\f0e0"; }
-.space-shuttle::before { content: "\f197"; }
 .file::before          { content: "\f15b"; }
 .bicycle::before       { content: "\f206"; }
 .rss::before           { content: "\f09e"; }
@@ -255,10 +257,8 @@ h3.competencies {
 }
 
 // value bars
-$height: 1.2rem;
 $width: 10rem;
 $padding: 1px;
-$radius: 0.3*$height;
 
 // html5 meter
 meter {
@@ -321,17 +321,6 @@ meter {
   }
 }
 
-.list li {
-  list-style-type: none;
-  margin-top: 1rem;
-}
-
-.list {
-  @media all and (max-width: 600px) {
-    text-align: center;
-  }
-}
-
 .crossed {
   position: relative;
 
@@ -349,6 +338,17 @@ meter {
   }
 }
 */
+
+.list li {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+.list {
+  @media all and (max-width: 600px) {
+    text-align: center;
+  }
+}
 // tri-list
 @media all and (min-width: 430px) {
   #pages .list {
