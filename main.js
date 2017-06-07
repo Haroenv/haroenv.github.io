@@ -3,7 +3,7 @@
 
 /* random description generator */
 var descriptions = [
-  "student",
+  //"student",
   "git lover",
   "open sourcer",
   "programmer",
