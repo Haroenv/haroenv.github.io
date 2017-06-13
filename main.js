@@ -1,19 +1,17 @@
-(function() {
-"use strict";
-
 /* random description generator */
 var descriptions = [
   //"student",
-  "a GitHub groupie",
-  "an open sourcer",
-  "a programmer",
-  "a nerd",
-  "a space enthousiast",
-  "not looking for a job",
-  "a meme",
-  "from Belgium",
-  "a <a href='https://bullg.it'>gitch</a>",
-  "living in Paris"
+  'a GitHub groupie',
+  'an open sourcer',
+  'a programmer',
+  'a nerd',
+  'a space enthousiast',
+  'not looking for a job',
+  'a meme',
+  'from Belgium',
+  'a <a href="https://bullg.it">gitch</a>',
+  'working at <a href="https://algolia.com">algolia</a>',
+  'living in Paris',
 ];
 
 var oldIndex = 0;
@@ -29,41 +27,32 @@ function generate() {
     }
   }
   var desc = descriptions[index1];
-  document.getElementById("generated").innerHTML = desc;
+  document.getElementById('generated').innerHTML = desc;
   oldIndex = index1;
 }
 
-
-document.getElementById("generator").addEventListener("click",function() {
-  generate();
-});
+document.getElementById('generator').addEventListener('click', generate);
 
 /* making fallback for meter element work */
 var meters = document.getElementsByTagName('meter');
 for (var i = 0; i < meters.length; i++) {
   if (meters[i].clientHeight === 0) {
-    meters[i].style.border = "none";
+    meters[i].style.border = 'none';
   }
 }
-
 
 /* scrolling to the next element */
 
 // https://gist.github.com/james2doyle/5694700
 // easing functions http://goo.gl/5HLl8
-Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d/2;
+Math.easeInOutQuad = function(t, b, c, d) {
+  t /= d / 2;
   if (t < 1) {
-    return c/2*t*t + b
+    return c / 2 * t * t + b;
   }
   t--;
-  return -c/2 * (t*(t-2) - 1) + b;
+  return -c / 2 * (t * (t - 2) - 1) + b;
 };
-
-// requestAnimationFrame for Smart Animating http://goo.gl/sx5sts
-var requestAnimFrame = (function(){
-  return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ){ window.setTimeout(callback, 1000 / 60); };
-})();
 
 function scrollTo(to, callback, duration) {
   // because it's so fucking difficult to detect the scrolling element, just move them all
@@ -73,14 +62,19 @@ function scrollTo(to, callback, duration) {
     document.body.scrollTop = amount;
   }
   function position() {
-    return document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop;
+    return (
+      document.documentElement.scrollTop ||
+      document.body.parentNode.scrollTop ||
+      document.body.scrollTop
+    );
   }
   var start = position(),
     change = to - start,
     currentTime = 0,
     increment = 20;
-  duration = (typeof(duration) === "undefined") ? 500 : duration;
-  var animateScroll = function() {
+  duration = typeof duration === 'undefined' ? 500 : duration;
+
+  function animateScroll() {
     // increment the time
     currentTime += increment;
     // find the value with the quadratic in-out easing function
@@ -89,29 +83,31 @@ function scrollTo(to, callback, duration) {
     move(val);
     // do the animation unless its over
     if (currentTime < duration) {
-      requestAnimFrame(animateScroll);
+      requestAnimationFrame(animateScroll);
     } else {
-      if (callback && typeof(callback) === "function") {
+      if (callback && typeof callback === 'function') {
         // the animation is done so lets callback
         callback();
       }
     }
-  };
+  }
   animateScroll();
 }
 
 //adding the scroll to the arrows
 function addScrollTo(element) {
-  element.addEventListener("click",function(e) {
-    scrollTo(document.getElementById(element.href.substr(element.href.indexOf("#")+1)).offsetTop,function() {
-      document.location = element.href;
-    });
+  element.addEventListener('click', function(e) {
+    scrollTo(
+      document.getElementById(
+        element.href.substr(element.href.indexOf('#') + 1)
+      ).offsetTop,
+      () => (document.location = element.href)
+    );
     e.preventDefault();
   });
-};
+}
 
-
-Array.from(document.getElementsByClassName("arrow")).forEach(addScrollTo);
+document.querySelectorAll('.arrow').forEach(addScrollTo);
 
 /* konami code */
 /*
@@ -125,38 +121,44 @@ Array.from(document.getElementsByClassName("arrow")).forEach(addScrollTo);
  * Licensed under the MIT License (http://opensource.org/licenses/MIT)
  * Tested in: Safari 4+, Google Chrome 4+, Firefox 3+, IE7+, Mobile Safari 2.2.1 and Dolphin Browser
  */
-var Konami = function (callback) {
+function Konami(callback) {
   var konami = {
-    addEvent: function (obj, type, fn, ref_obj) {
-      if (obj.addEventListener)
-        obj.addEventListener(type, fn, false);
+    addEvent: function(obj, type, fn, ref_obj) {
+      if (obj.addEventListener) obj.addEventListener(type, fn, false);
       else if (obj.attachEvent) {
         // IE
-        obj["e" + type + fn] = fn;
-        obj[type + fn] = function () {
-          obj["e" + type + fn](window.event, ref_obj);
-        }
-        obj.attachEvent("on" + type, obj[type + fn]);
+        obj['e' + type + fn] = fn;
+        obj[type + fn] = function() {
+          obj['e' + type + fn](window.event, ref_obj);
+        };
+        obj.attachEvent('on' + type, obj[type + fn]);
       }
     },
-    input: "",
-    pattern: "38384040373937396665",
-    load: function (link) {
-      this.addEvent(document, "keydown", function (e, ref_obj) {
-        if (ref_obj) konami = ref_obj; // IE
-        konami.input += e ? e.keyCode : event.keyCode;
-        if (konami.input.length > konami.pattern.length)
-          konami.input = konami.input.substr((konami.input.length - konami.pattern.length));
-        if (konami.input == konami.pattern) {
-          konami.code(link);
-          konami.input = "";
-          e.preventDefault();
-          return false;
-        }
-      }, this);
+    input: '',
+    pattern: '38384040373937396665',
+    load: function(link) {
+      this.addEvent(
+        document,
+        'keydown',
+        function(e, ref_obj) {
+          if (ref_obj) konami = ref_obj; // IE
+          konami.input += e ? e.keyCode : event.keyCode;
+          if (konami.input.length > konami.pattern.length)
+            konami.input = konami.input.substr(
+              konami.input.length - konami.pattern.length
+            );
+          if (konami.input == konami.pattern) {
+            konami.code(link);
+            konami.input = '';
+            e.preventDefault();
+            return false;
+          }
+        },
+        this
+      );
       this.iphone.load(link);
     },
-    code: function (link) {
+    code: function(link) {
       window.location = link;
     },
     iphone: {
@@ -166,14 +168,25 @@ var Konami = function (callback) {
       stop_y: 0,
       tap: false,
       capture: false,
-      orig_keys: "",
-      keys: ["UP", "UP", "DOWN", "DOWN", "LEFT", "RIGHT", "LEFT", "RIGHT", "TAP", "TAP"],
-      code: function (link) {
+      orig_keys: '',
+      keys: [
+        'UP',
+        'UP',
+        'DOWN',
+        'DOWN',
+        'LEFT',
+        'RIGHT',
+        'LEFT',
+        'RIGHT',
+        'TAP',
+        'TAP',
+      ],
+      code: function(link) {
         konami.code(link);
       },
-      load: function (link) {
+      load: function(link) {
         this.orig_keys = this.keys;
-        konami.addEvent(document, "touchmove", function (e) {
+        konami.addEvent(document, 'touchmove', function(e) {
           if (e.touches.length == 1 && konami.iphone.capture == true) {
             var touch = e.touches[0];
             konami.iphone.stop_x = touch.pageX;
@@ -183,49 +196,52 @@ var Konami = function (callback) {
             konami.iphone.check_direction();
           }
         });
-        konami.addEvent(document, "touchend", function (evt) {
-          if (konami.iphone.tap == true) konami.iphone.check_direction(link);
-        }, false);
-        konami.addEvent(document, "touchstart", function (evt) {
+        konami.addEvent(
+          document,
+          'touchend',
+          function(evt) {
+            if (konami.iphone.tap == true) konami.iphone.check_direction(link);
+          },
+          false
+        );
+        konami.addEvent(document, 'touchstart', function(evt) {
           konami.iphone.start_x = evt.changedTouches[0].pageX;
           konami.iphone.start_y = evt.changedTouches[0].pageY;
           konami.iphone.tap = true;
           konami.iphone.capture = true;
         });
       },
-      check_direction: function (link) {
+      check_direction: function(link) {
         x_magnitude = Math.abs(this.start_x - this.stop_x);
         y_magnitude = Math.abs(this.start_y - this.stop_y);
-        x = ((this.start_x - this.stop_x) < 0) ? "RIGHT" : "LEFT";
-        y = ((this.start_y - this.stop_y) < 0) ? "DOWN" : "UP";
-        result = (x_magnitude > y_magnitude) ? x : y;
-        result = (this.tap === true) ? "TAP" : result;
+        x = this.start_x - this.stop_x < 0 ? 'RIGHT' : 'LEFT';
+        y = this.start_y - this.stop_y < 0 ? 'DOWN' : 'UP';
+        result = x_magnitude > y_magnitude ? x : y;
+        result = this.tap === true ? 'TAP' : result;
 
-        if (result == this.keys[0]) this.keys = this.keys.slice(1, this.keys.length);
+        if (result == this.keys[0])
+          this.keys = this.keys.slice(1, this.keys.length);
         if (this.keys.length === 0) {
           this.keys = this.orig_keys;
           this.code(link);
         }
-      }
-    }
-  }
+      },
+    },
+  };
 
-  typeof callback === "string" && konami.load(callback);
-  if (typeof callback === "function") {
+  typeof callback === 'string' && konami.load(callback);
+  if (typeof callback === 'function') {
     konami.code = callback;
     konami.load();
   }
 
   return konami;
-};
+}
 
-var easter_egg = new Konami(function() {
-  var head = document.getElementsByTagName("head")[0],
-  link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = "https://s.haroen.me/konami.css";
-  head.insertBefore(link, head.childNodes[0]);
-  return link;
+new Konami(() => {
+  const head = document.getElementsByTagName('head')[0];
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'https://s.haroen.me/konami.css';
+  head.insertBefore(link, head.firstChild);
 });
-
-}());
