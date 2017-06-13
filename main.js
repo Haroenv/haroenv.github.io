@@ -4,15 +4,16 @@
 /* random description generator */
 var descriptions = [
   //"student",
-  "git lover",
-  "open sourcer",
-  "programmer",
-  "nerd",
-  "space enthousiast",
-  "poweruser",
-  "meme",
-  "Belgian",
-  "<a href='https://bullg.it'>gitch</a>"
+  "a GitHub groupie",
+  "an open sourcer",
+  "a programmer",
+  "a nerd",
+  "a space enthousiast",
+  "not looking for a job",
+  "a meme",
+  "from Belgium",
+  "a <a href='https://bullg.it'>gitch</a>",
+  "living in Paris"
 ];
 
 var oldIndex = 0;
