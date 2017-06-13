@@ -1,6 +1,6 @@
 /* random description generator */
-var descriptions = [
-  //"student",
+const descriptions = [
+  //'a student',
   'a GitHub groupie',
   'an open sourcer',
   'a programmer',
@@ -14,47 +14,44 @@ var descriptions = [
   'living in Paris',
 ];
 
-var oldIndex = 0;
+let oldIndex = 0;
+
+function getIndex(oldIndex = 0, length) {
+  const index = Math.floor(Math.random() * length);
+
+  return index === oldIndex ? index - 1 % length : index;
+}
 
 //generate a new description
 function generate() {
-  var index1 = Math.floor(Math.random() * descriptions.length);
-  if (index1 === oldIndex) {
-    if (index1 === 0) {
-      index1 = descriptions.length - 1;
-    } else {
-      index1--;
-    }
-  }
-  var desc = descriptions[index1];
-  document.getElementById('generated').innerHTML = desc;
-  oldIndex = index1;
+  const index = getIndex(oldIndex, descriptions.length);
+  oldIndex = index;
+  document.getElementById('generated').innerHTML = descriptions[index];
 }
 
 document.getElementById('generator').addEventListener('click', generate);
 
 /* making fallback for meter element work */
-var meters = document.getElementsByTagName('meter');
-for (var i = 0; i < meters.length; i++) {
-  if (meters[i].clientHeight === 0) {
-    meters[i].style.border = 'none';
-  }
-}
+document
+  .querySelectorAll('meter')
+  .forEach(
+    meter => (meter.clientHeight === 0 ? (meter.style.border = 'none') : false)
+  );
 
 /* scrolling to the next element */
 
 // https://gist.github.com/james2doyle/5694700
 // easing functions http://goo.gl/5HLl8
-Math.easeInOutQuad = function(t, b, c, d) {
+function easeInOutQuad(t, b, c, d) {
   t /= d / 2;
   if (t < 1) {
     return c / 2 * t * t + b;
   }
   t--;
   return -c / 2 * (t * (t - 2) - 1) + b;
-};
+}
 
-function scrollTo(to, callback, duration) {
+function scrollTo(to, duration = 500) {
   // because it's so fucking difficult to detect the scrolling element, just move them all
   function move(amount) {
     document.documentElement.scrollTop = amount;
@@ -68,42 +65,41 @@ function scrollTo(to, callback, duration) {
       document.body.scrollTop
     );
   }
-  var start = position(),
-    change = to - start,
-    currentTime = 0,
-    increment = 20;
-  duration = typeof duration === 'undefined' ? 500 : duration;
+  const start = position();
+  const change = to - start;
+  const increment = 20;
+  let currentTime = 0;
 
-  function animateScroll() {
-    // increment the time
-    currentTime += increment;
-    // find the value with the quadratic in-out easing function
-    var val = Math.easeInOutQuad(currentTime, start, change, duration);
-    // move the document.body
-    move(val);
-    // do the animation unless its over
-    if (currentTime < duration) {
-      requestAnimationFrame(animateScroll);
-    } else {
-      if (callback && typeof callback === 'function') {
+  return new Promise(resolve => {
+    function animateScroll() {
+      // increment the time
+      currentTime += increment;
+      // find the value with the quadratic in-out easing function
+      const val = easeInOutQuad(currentTime, start, change, duration);
+      // move the document.body
+      move(val);
+      // do the animation unless its over
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScroll);
+      } else {
         // the animation is done so lets callback
-        callback();
+        resolve();
       }
     }
-  }
-  animateScroll();
+    animateScroll();
+  });
 }
 
 //adding the scroll to the arrows
 function addScrollTo(element) {
   element.addEventListener('click', function(e) {
+    e.preventDefault();
+
     scrollTo(
       document.getElementById(
         element.href.substr(element.href.indexOf('#') + 1)
-      ).offsetTop,
-      () => (document.location = element.href)
-    );
-    e.preventDefault();
+      ).offsetTop
+    ).then(() => (document.location = element.href));
   });
 }
 
