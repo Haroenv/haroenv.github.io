@@ -105,6 +105,20 @@ function addScrollTo(element) {
 
 document.querySelectorAll('.arrow').forEach(addScrollTo);
 
+/* getting my whereabouts */
+async function getLocation() {
+  const res = await fetch('https://where-is-haroen.now.sh');
+  return res.json();
+}
+
+async function updateLoc() {
+  const { city, country } = await getLocation();
+  const locationEl = document.getElementById('location');
+  locationEl.innerText = `${city}, ${country}`;
+}
+
+updateLoc();
+
 /* konami code */
 /*
  * Konami-JS ~

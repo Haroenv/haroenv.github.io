@@ -1,5 +1,5 @@
 <h2 class="main">Meet me</h2>
-<p>I am now in <strong>{{site.data.location.city}}</strong></p>
+<p>I am now in <strong id="location">{{site.data.location.city}}</strong></p>
 <ul class="list">
   {% assign current = site.time | date: "%s" %}
   {% for meetup in site.data.meetups %}
