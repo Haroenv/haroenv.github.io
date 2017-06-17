@@ -114,13 +114,15 @@ async function getLocation() {
 async function updateLoc() {
   const { city, country } = await getLocation();
   const locationEl = document.getElementById('location');
-  locationEl.innerText = `${city}, ${country} `;
+  const text = document.createTextNode(`${city}, ${country} `);
   const info = document.createElement('a');
   info.classList.add('question', 'icons');
   info.title = 'made with the Foursquare API';
   info.target = '_blank';
   info.rel = 'noreferrer';
   info.href = 'https://github.com/Haroenv/where-am-i';
+  locationEl.innerText = '';
+  locationEl.appendChild(text);
   locationEl.appendChild(info);
 }
 
