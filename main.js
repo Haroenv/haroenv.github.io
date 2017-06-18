@@ -121,8 +121,8 @@ async function updateLoc() {
   info.target = '_blank';
   info.rel = 'noreferrer';
   info.href = 'https://github.com/Haroenv/where-am-i';
-  locationEl.innerText = '';
-  locationEl.appendChild(text);
+
+  locationEl.replaceChild(text,locationEl.firstChild);
   locationEl.appendChild(info);
 }
 
