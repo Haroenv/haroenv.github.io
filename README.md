@@ -1,5 +1,4 @@
-#<https://haroenv.github.io>
-#<https://haroen.me>
+# [haroen.me](https://haroen.me)
 
 A responsive landing page for Haroen Viaene.
 
