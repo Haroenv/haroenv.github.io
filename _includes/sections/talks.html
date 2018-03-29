@@ -1,0 +1,11 @@
+<h2 class="main">Talks I gave recently</h2>
+<ul class="list multi-list">
+  {% assign talks = site.data.talks | sort: 'date' | reverse %}
+  {% for talk in talks %}
+  <li>
+    <a href="https://haroen.me/presentations/{{talk.slug}}" style="display: block; text-align: center;">{{ talk.name }}</a>
+    <time datetime="{{talk.date | date_to_xmlschema}}" style="display: block; text-align: center; font-size: .8em; opacity: .8;">{{talk.date | date_to_string}}</time>
+  </li>
+  {% endfor %}
+</ul>
+<p>and some more on <a href="https://haroen.me/presentations">my talks site</a>.</p>

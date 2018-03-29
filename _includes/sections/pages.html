@@ -1,6 +1,6 @@
 <h2 class="main">Some examples</h2>
 <p>updated: <time datetime="{{site.time | date_to_xmlschema}}">{{site.time | date_to_string}}</time></p>
-<ul class="list">
+<ul class="list multi-list">
   {% assign repos = site.github.public_repositories | sort: 'stargazers_count' | reverse %}
   {% for repo in repos limit: 15 %}
   {% unless repo.fork %}

@@ -5,19 +5,12 @@
 $background: #7f1734;
 $foreground: #fff;
 $alternate: #ccc;
-
 $small: 1.3rem;
 $normal: 2rem;
 $large: 4rem;
 $huge: 6rem;
-
 $radius: 0.3em;
-
-
-$transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
-
-// General stying
-
+$transition: all 300ms cubic-bezier(1, 0.01, 0, 1.005); /* General stying */
 %flex-center-column {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,55 +25,53 @@ $transition: all 300ms cubic-bezier(1, .010, 0, 1.005);
   -ms-flex-pack: center;
   justify-content: center;
 }
-
 html {
   font-size: 62.5%;
   background-color: $background;
   line-height: 2;
 }
-
 @font-face {
   font-family: 'FontAwesome';
   src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0')
+      format('embedded-opentype'),
+    url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0')
+      format('woff2'),
+    url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0')
+      format('woff'),
+    url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0')
+      format('truetype'),
+    url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular')
+      format('svg');
   font-weight: normal;
   font-style: normal;
 }
-
 body {
   margin: 0 1em;
   color: $foreground;
   font-family: Avenir, 'Trebuchet MS', Arial, sans-serif;
   font-size: 1.6rem;
 }
-
 a {
   color: $foreground;
-
   &.no-underline {
     text-decoration: none;
   }
 }
-
-
 .gist {
   max-width: 100%;
 }
-
 code {
   font-family: Monaco, Consolas, 'Courier New', monospace;
 }
-
 ul {
   padding-left: 0;
 }
-
 .fullpage {
   @extend %flex-center-column;
   @media screen and (min-height: 600px) and (min-width: 600px) {
     min-height: 100vh;
   }
-
   .content {
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -88,13 +79,11 @@ ul {
     @extend %flex-center-column;
   }
 }
-
 .error {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
-
 .arrow {
   font-size: 2em;
   margin-bottom: 2vh;
@@ -105,44 +94,39 @@ ul {
   @media screen and (max-height: 600px) {
     display: none;
   }
-
-  &::before { content: '\f175'; }
+  &::before {
+    content: '\f175';
+  }
 }
-
-h1, h2.main {
+h1,
+h2.main {
   font-size: $large;
 }
-
 // Button
-
 .button {
   background-color: $foreground;
-  border-radius: .2em;
+  border-radius: 0.2em;
   border: none;
   color: $background;
   font-size: $normal;
   padding: 1rem 2rem;
   text-decoration: none;
   transition: $transition;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-
   &:hover {
     background-color: transparent;
     box-shadow: inset 0 0 0 1px currentColor;
     color: $foreground;
     cursor: pointer;
   }
-
   &:active {
     box-shadow: inset 0 0 0 2px currentColor;
   }
 }
-
 p#generated {
   font-size: $huge;
   word-wrap: break-word;
@@ -152,9 +136,7 @@ p#generated {
   hyphens: auto;
   text-align: center;
 }
-
-// Social icons
-
+/* Social icons */
 .social {
   h2 {
     text-align: center;
@@ -163,22 +145,19 @@ p#generated {
     padding: 3rem;
     padding-top: 1rem;
     text-align: center;
-
     li {
       display: inline-block;
       font-size: $small;
       text-transform: uppercase;
-      margin: .5rem 0;
-
+      margin: 0.5rem 0;
       a {
         text-decoration: none;
         margin: 1rem;
-        padding: .5rem;
+        padding: 0.5rem;
       }
     }
   }
 }
-
 .icons::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
@@ -191,24 +170,38 @@ p#generated {
   padding-right: 0.3rem;
   vertical-align: center;
 }
-
-.github::before        { content: "\f09b"; }
-.codepen::before       { content: "\f1cb"; }
-.twitter::before       { content: "\f099"; }
-.instagram::before     { content: "\f16d"; }
-.envelope::before      { content: "\f0e0"; }
-.file::before          { content: "\f15b"; }
-.bicycle::before       { content: "\f206"; }
-.rss::before           { content: "\f09e"; }
-.question::before      { content: "\f059"; }
-
+.github::before {
+  content: '\f09b';
+}
+.codepen::before {
+  content: '\f1cb';
+}
+.twitter::before {
+  content: '\f099';
+}
+.instagram::before {
+  content: '\f16d';
+}
+.envelope::before {
+  content: '\f0e0';
+}
+.file::before {
+  content: '\f15b';
+}
+.bicycle::before {
+  content: '\f206';
+}
+.rss::before {
+  content: '\f09e';
+}
+.question::before {
+  content: '\f059';
+}
 // competencies
-/*
 li.marks {
   margin: 1rem;
   vertical-align: text-top;
 }
-
 ul.competencies {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -217,7 +210,6 @@ ul.competencies {
   -ms-flex-direction: row;
   flex-direction: row;
 }
-
 @media screen and (max-width: 470px) {
   ul.competencies {
     -webkit-flex-direction: column;
@@ -226,170 +218,76 @@ ul.competencies {
   }
   #competencies .arrow,
   #education .arrow,
-  #pages .arrow, {
+  #pages .arrow {
     display: none;
     visibility: hidden;
   }
 }
-
 .competencies li {
   list-style-type: none;
 }
-
 .marks ul {
   padding-left: 0;
 }
-
 .items {
   @extend %flex-center-column;
 }
-
 .items p {
   font-size: $small;
-  margin: .5rem;
+  margin: 0.5rem;
   text-transform: uppercase;
   text-align: center;
 }
-
 h3.competencies {
   font-size: $normal;
   margin: 1.5rem 0;
   text-transform: uppercase;
   text-align: center;
 }
-
-// value bars
-$width: 10rem;
-$padding: 1px;
-
-// html5 meter
-meter {
-  width: $width;
-  height: $height;
-  border: $padding solid $foreground;
-  border-radius: $radius;
-  background: $foreground;
-  vertical-align: 0;
-
-  // webkit uses this as the background
-  &::-webkit-meter-bar {
-    background: none;
-  }
-
-  // and this as the foreground
-  &::-webkit-meter-optimum-value {
-    background: $background;
-    border: none;
-    border-radius: $radius;
-  }
-
-  // Gecko uses this as the foreground
-  &::-moz-meter-bar {
-    background: $background;
-    border: none;
-    border-radius: $radius;
-  }
-}
-
-// fallback
-// the background part
-.level {
-  margin: 0 auto;
-  z-index: 0;
-  width: $width;
-  height: $height;
-  background-color: $foreground;
-  border-radius: $radius;
-  padding: $padding;
-  position: relative;
-
-  // foreground part
-  &::after {
-    z-index: 1;
-    content: "";
-    height: $height;
-    background-color: $background;
-    border-radius: $radius;
-    position: absolute;
-    left: $padding;
-    top: $padding;
-  }
-}
-
-// the length of the foreground
-@for $i from 1 through 10 {
-  .level-#{$i}::after {
-    width: $width*$i/10;
-  }
-}
-
-.crossed {
-  position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 148 148'><path fill='none' fill-rule='evenodd' stroke='white' d='M7.587 45.31l30.46-26.81-35.26 109.02L117.318 3 59.955 144s78.677-92.59 78.677-90.527c0 2.063-14.08 82.446-14.08 82.446l20.66-17.562'/></svg>") center no-repeat;
-    @media (max-width: 470px) {
-      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 305 704'><path fill='none' stroke='white' stroke-width='5' d='M14.8984375,0.57421875 L300.980469,45.8007812 L66.3046875,82.9921875 L247.746094,142.578125 L13.1914062,217.472656 L244.160156,308.066406 L98.8164062,362.691406 L194.816406,414.328125 L22.9726562,448.65625 L244.484375,550.039062 L2.25,609.890625 L174.296875,658.679688 L111.25,703.289062'/></svg>") top repeat-y;
-    }
-  }
-}
-*/
-
 .list li {
   list-style-type: none;
   margin-top: 1rem;
 }
-
 .list {
   @media all and (max-width: 600px) {
     text-align: center;
   }
-}
-// tri-list
+} // tri-list
 @media all and (min-width: 430px) {
-  #pages .list {
+  .multi-list {
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
-
     li {
       -webkit-break-inside: avoid-column;
       break-inside: avoid-column;
     }
   }
 }
-
-//footer
+// footer
 footer {
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: center;
 }
-
 // 404 things
-
 .search {
   -webkit-transform: scale(1) rotate(0deg);
   transform: scale(1) rotate(0deg);
   transition: $transition;
-
-  path { fill: $foreground; }
-
-  .mark { fill: $foreground; }
-
-  .mark:hover { fill: $alternate; }
-
+  path {
+    fill: $foreground;
+  }
+  .mark {
+    fill: $foreground;
+  }
+  .mark:hover {
+    fill: $alternate;
+  }
   &:hover {
-    -webkit-transform: scale(.9) rotate(3deg);
-    transform: scale(.9) rotate(3deg);
+    -webkit-transform: scale(0.9) rotate(3deg);
+    transform: scale(0.9) rotate(3deg);
   }
 }
-
 video.bg {
   position: fixed;
   top: 50%;
@@ -403,12 +301,12 @@ video.bg {
   transform: translateX(-50%) translateY(-50%);
   background-size: cover;
 }
-.mute, .play {
+.mute,
+.play {
   font-family: FontAwesome;
   text-decoration: none;
-  padding: .5rem;
+  padding: 0.5rem;
 }
-
 .controls {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -422,7 +320,9 @@ video.bg {
   padding: 1rem;
   border-radius: $radius;
 }
-
 @media screen and (max-width: 675px), (pointer: coarse) {
-  .controls, video.bg { display: none; }
+  .controls,
+  video.bg {
+    display: none;
+  }
 }
