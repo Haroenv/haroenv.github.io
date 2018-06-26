@@ -1,7 +1,5 @@
 /* random description generator */
 const descriptions = [
-  //'a student',
-  'a GitHub groupie',
   'an open sourcer',
   'a programmer',
   'a nerd',
