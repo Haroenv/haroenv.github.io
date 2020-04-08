@@ -3,7 +3,7 @@ const descriptions = [
   'an open sourcer',
   'a programmer',
   'a nerd',
-  'a space enthousiast',
+  'a space enthusiast',
   'not looking for a job',
   'a meme',
   'from Belgium',
