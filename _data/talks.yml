@@ -1,3 +1,27 @@
+- name: Transforming code to other code
+  slug: en/transforming-code
+  date: 2020-04-14
+- name: Abstract Components (JSConf BE)
+  slug: en/abstract-components-2
+  date: 2019-06-21
+- name: Abstract Components
+  slug: en/abstract-components
+  date: 2019-04-24
+- name: Search for a Gatsby site
+  slug: en/gatsby-algolia
+  date: 2019-03-07
+- name: How does search actually work (IronHack)
+  slug: en/how-does-search-work-ironhack
+  date: 2018-11-26
+- name: You're probably making an API client (Artsy Lunch & Learn)
+  slug: en/api-clients-artsy
+  date: 2018-08-30
+- name: Why is there a new version of Vue InstantSearch?
+  slug: en/why-new-version
+  date: 2018-08-16
+- name: You're probably making an API client (Odessa JS)
+  slug: en/api-clients-odessa
+  date: 2018-07-08
 - name: making search on Yarn
   slug: en/yarn-search
   date: 2018-03-28
