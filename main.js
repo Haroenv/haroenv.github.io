@@ -1,7 +1,7 @@
 /* random description generator */
 const descriptions = [
-  'an open sourcer',
   'a programmer',
+  'an open sourcer',
   'a nerd',
   'a space enthusiast',
   'not looking for a job',
@@ -17,7 +17,7 @@ let oldIndex = 0;
 function getIndex(oldIndex = 0, length) {
   const index = Math.floor(Math.random() * length);
 
-  return index === oldIndex ? index - 1 % length : index;
+  return index === oldIndex ? index % length : index;
 }
 
 //generate a new description
