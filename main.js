@@ -104,8 +104,8 @@ function addScrollTo(element) {
 document.querySelectorAll('.arrow').forEach(addScrollTo);
 
 /* getting my whereabouts */
-const getLocation = async () =>
-  await fetch('https://where-is-haroen.now.sh').then(res => res.json());
+const getLocation = () =>
+  fetch('https://where-is-haroen.now.sh').then(res => res.json());
 
 async function updateLoc() {
   const { city, country } = await getLocation();
